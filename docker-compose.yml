@@ -15,6 +15,7 @@ services:
     working_dir: /modx
 
   nginx:
+    image: nginx:${NGINX_VERSION}
     build:
       context: ./docker/nginx
       dockerfile: "./Dockerfile"
