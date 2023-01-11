@@ -15,7 +15,9 @@ services:
     working_dir: /modx
 
   nginx:
-    image: nginx:${NGINX_VERSION}
+    build:
+      context: ./docker/nginx
+      dockerfile: "./Dockerfile"
     environment:
       - NGINX_PORT=${NGINX_PORT}
     volumes:
@@ -36,6 +38,7 @@ services:
   php-fpm:
     build:
       context: ./docker/php-fpm
+      dockerfile: "./Dockerfile"
       args:
         - PHP_VERSION
     volumes:
