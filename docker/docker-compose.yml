@@ -46,15 +46,11 @@ services:
     environment:
       PHP_IDE_CONFIG: "serverName=ModxDocker"
     working_dir: /modx
-
-  node:
-    image: node:${NODE_VERSION}-alpine
+  composer:
+    image: "composer"
     volumes:
-      - ../assets:/assets
-      - ../modx:/modx
-    ports:
-      - ${NODE_DEV_PORT}:9000
+        - ../modx:/modx
     depends_on:
-      - nginx
-    working_dir: /assets
-    command: sh -c "yarn && yarn dev"
+      - php-fpm
+    command: install
+    working_dir: /modx

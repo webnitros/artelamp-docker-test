@@ -1,3 +1,9 @@
+Добавить тесты 
+
+https://github.com/cypress-io/cypress-example-docker-compose
+
+
+
 MODX Docker Project by Pixmill
 ---
 

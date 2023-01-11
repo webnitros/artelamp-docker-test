@@ -1,0 +1,22 @@
+{
+  "baseUrl": "http://localhost:8000",
+  "reporter": "cypress-teamcity-reporter",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
+  "videoCompression": 15,
+  "videoUploadOnPasses": false,
+  "userAgent": "User-Agent: Mozilla/5.0 Cypress-test",
+  "viewportWidth": 1440,
+  "viewportHeight": 660,
+  "blacklistHosts": [
+    "www.google-analytics.com",
+    "*.google-analytics.com",
+    "*google-analytics.com",
+    "api.mindbox.ru",
+    "stats.g.doubleclick.net",
+    "mc.yandex.ru",
+    "code-ya.jivosite.com",
+    "personalization-web-stable.mindbox.ru"
+  ]
+}

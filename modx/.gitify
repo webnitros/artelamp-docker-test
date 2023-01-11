@@ -17,13 +17,6 @@ data:
         primary:
             - tmplvarid
             - templateid
-    content:
-        type: content
-        exclude_keys:
-            - editedby
-            - editedon
-        truncate_on_force:
-            - modTemplateVarResource
     categories:
         class: modCategory
         primary: category
