@@ -33,7 +33,7 @@ modx-restore:
 	@rm -Rf $(MYSQL_DUMPS_DIR)/db.sql
 
 modx-restore-install:
-	sh docker/comands/install.sh
+	sh docker/install.sh
 	@make modx-restore
 
 modx-backup:

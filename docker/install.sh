@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "./.env"
+source "../.env"
 
 rm -rf ../dumps/db.tar.gz
 rm -rf ../dumps/db.sql
