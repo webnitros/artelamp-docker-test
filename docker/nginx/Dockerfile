@@ -1,5 +1,5 @@
 FROM jwilder/nginx-proxy
 
-COPY default.conf.template /etc/nginx/templates/
+COPY default.conf /etc/nginx/templates
 
 CMD ["nginx", "-g", "daemon off;"]
