@@ -19,11 +19,11 @@ yarn-up:
 	@docker exec -it $(shell docker-compose ps -q node) yarn -c install
 
 docker-start: init
-	@rm -Rf ../modx/core/cache/
 	docker-compose up --build --detach
 
 docker-stop:
 	docker-compose stop
+	@make clean
 
 docker-restart:
 	@make docker-stop
@@ -52,9 +52,8 @@ tests:
 	@docker exec -it $(shell docker-compose ps -q node) npm run test
 
 clean:
+	@rm -Rf ../modx/vendor
 	@rm -Rf ../modx/composer.lock
-	@rm -Rf ../modx/core/cache/
-	@rm -Rf ../modx/vendor/
 	@rm -Rf ../assets/node_modules/
 
 .PHONY: clean test code-sniff init

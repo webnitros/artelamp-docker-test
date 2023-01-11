@@ -11,7 +11,6 @@
 	if (!defined('MODX_BASE_PATH')) {
 		define('MODX_BASE_PATH', '');
 	}
-	include_once dirname(MODX_BASE_PATH) . '/vendor/autoload.php';
 
 	use Arhitector\Yandex\Disk;
 	use GuzzleHttp\Client;

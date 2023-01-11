@@ -22,6 +22,10 @@ services:
       - ./nginx:/etc/nginx/templates
       - ./log/nginx:/var/log/nginx
       - ../modx:/modx
+      - ../data/images:/modx/assets/images
+      - ../data/manager:/modx/assets/manager
+      - ../data/media:/modx/assets/media
+      - ../data/YandexDisk:/modx/assets/YandexDisk
     ports:
       - ${NGINX_PORT}:80
     depends_on:
@@ -39,6 +43,11 @@ services:
       - ./log/php-fpm:/var/log/php
       - ./.env:/modx/.env
       - ../modx:/modx
+      - ../data/images:/modx/assets/images
+      - ../data/manager:/modx/assets/manager
+      - ../data/media:/modx/assets/media
+      - ../data/YandexDisk:/modx/assets/YandexDisk
+      - ../data/cache:/modx/core/cache
     cap_add:
       - SYS_PTRACE
     depends_on:
