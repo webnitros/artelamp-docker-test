@@ -38,3 +38,9 @@ make modx-restore-install
 ```yaml
 https://ivan-shamaev.ru/docker-compose-tutorial-container-image-install/#__Linux_Install_Docker_on_Ubuntu_2004
 ```
+
+
+# Хорошая инструкции по жизненому циклу
+```
+https://1cloud.ru/blog/docker-compose
+```
