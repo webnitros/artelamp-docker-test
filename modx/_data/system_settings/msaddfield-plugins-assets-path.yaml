@@ -1,0 +1,4 @@
+key: msaddfield_plugins_assets_path
+value: '{assets_path}components/minishop2/plugins/msaddfield/msproductdata.js'
+namespace: msaddfield
+area: msaddfield_main

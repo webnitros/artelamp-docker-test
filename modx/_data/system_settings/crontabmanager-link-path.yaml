@@ -1,0 +1,4 @@
+key: crontabmanager_link_path
+value: '{core_path}scheduler/ControllersLinks'
+namespace: crontabmanager
+area: crontabmanager_path

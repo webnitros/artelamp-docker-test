@@ -1,0 +1,5 @@
+key: minCartCost
+value: '0'
+xtype: numberfield
+namespace: minishop2
+area: artelamp

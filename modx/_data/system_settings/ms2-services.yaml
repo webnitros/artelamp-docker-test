@@ -1,0 +1,5 @@
+key: ms2_services
+value: '{"cart":[],"order":[],"payment":{"msppayanywaypaymenthandler":"{core_path}components\/msppayanyway\/controllers\/msppayanywaypaymenthandler.class.php"},"delivery":[]}'
+xtype: textarea
+namespace: minishop2
+area: ms2_main

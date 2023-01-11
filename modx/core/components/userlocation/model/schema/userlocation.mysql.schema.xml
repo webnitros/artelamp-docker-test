@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="userlocation" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="userlocation" version="1.1">
+
+
+    <object class="ulLocation" table="ul_locations" extends="xPDOObject">
+        <field key="id" dbtype="varchar" precision="15" phptype="string" null="false" index="pk" comment="Код адресного объекта из КЛАДР объекта"/>
+        <field key="name" dbtype="varchar" precision="120" phptype="string" null="false" comment="Наименование объекта"/>
+        <field key="type" dbtype="varchar" precision="50" phptype="string" null="true" default="" comment="Тип объекта"/>
+        <field key="postal" dbtype="varchar" precision="10" phptype="string" null="true" default="" comment="Почтовый индекс объекта"/>
+        <field key="gninmb" dbtype="varchar" precision="10" phptype="string" null="true" default="" comment="Код ИФНС объекта"/>
+        <field key="okato" dbtype="varchar" precision="11" phptype="string" null="true" default="" comment="Код ОКАТО объекта"/>
+        <field key="oktmo" dbtype="varchar" precision="8" phptype="string" null="true" default="" comment="Код ОКТМО объекта"/>
+        <field key="fias" dbtype="varchar" precision="36" phptype="string" null="true" default="" comment="Код ФИАС объекта"/>
+
+        <field key="active" dbtype="tinyint" precision="1" phptype="integer" null="true" default="1"/>
+        <field key="parent" dbtype="varchar" precision="15" phptype="string" null="true" default="" comment="Код родителя объекта"/>
+        <field key="resource" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="true" default="0"/>
+        <field key="description" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="properties" dbtype="text" phptype="json" null="true" />
+
+        <index alias="id" name="id" primary="false" unique="true" type="BTREE">
+            <column key="id" length="15" collation="A" null="false"/>
+        </index>
+        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
+            <column key="name" length="120" collation="A" null="false"/>
+        </index>
+        <index alias="type" name="type" primary="false" unique="false" type="BTREE">
+            <column key="type" length="50" collation="A" null="false"/>
+        </index>
+        <index alias="postal" name="postal" primary="false" unique="false" type="BTREE">
+            <column key="postal" length="10" collation="A" null="false"/>
+        </index>
+        <index alias="gninmb" name="gninmb" primary="false" unique="false" type="BTREE">
+            <column key="gninmb" length="10" collation="A" null="false"/>
+        </index>
+        <index alias="okato" name="okato" primary="false" unique="false" type="BTREE">
+            <column key="okato" length="11" collation="A" null="false"/>
+        </index>
+        <index alias="oktmo" name="oktmo" primary="false" unique="false" type="BTREE">
+            <column key="oktmo" length="8" collation="A" null="false"/>
+        </index>
+        <index alias="fias" name="fias" primary="false" unique="false" type="BTREE">
+            <column key="fias" length="36" collation="A" null="false"/>
+        </index>
+        <index alias="resource" name="resource" primary="false" unique="false" type="BTREE">
+            <column key="resource" length="" collation="A" null="false"/>
+        </index>
+
+    </object>
+    
+    
+</model>

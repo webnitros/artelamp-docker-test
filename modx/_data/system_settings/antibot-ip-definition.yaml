@@ -1,0 +1,4 @@
+key: antibot_ip_definition
+value: REMOTE_ADDR
+namespace: antibot
+area: antibot_main

@@ -1,0 +1,5 @@
+key: msppayanyway_payment_test_mode
+value: '0'
+xtype: combo-boolean
+namespace: msppayanyway
+area: msppayanyway_main

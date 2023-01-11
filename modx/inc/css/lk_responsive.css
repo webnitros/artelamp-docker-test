@@ -1,0 +1,127 @@
+@media screen and (max-width: 768px) {
+  .authorization__tab_buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin: 0 0 25px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .authorization__tab_buttons .btn {
+    padding: 0;
+    height: 40px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'fm';
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .authorization__tab_buttons .btn.btn_enter {
+    min-width: 40%;
+    max-width: 40%;
+  }
+  .authorization__tab_buttons .btn.btn_reg {
+    min-width: calc(60% - 20px);
+    max-width: calc(60% - 20px);
+  }
+  .authorization__tab_buttons .btn.active {
+    background: #000000;
+    color: #ffffff;
+  }
+  .authorization__headline {
+    display: none;
+  }
+  .authorization__preference {
+    display: none;
+  }
+  .authorization__subscribe {
+    padding-top: 0;
+  }
+  .authorization__subscribe .checkbox + label {
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 1;
+    font-size: 12px;
+  }
+  .authorization__subscribe .checkbox + label span {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .authorization__subscribe {
+    padding-top: 10px;
+    margin-bottom: 40px;
+  }
+  .authorization__reg__info {
+    font-size: 12px;
+    line-height: 1.9;
+    margin-top: -5px;
+  }
+  .authorization__subscribe .checkbox + label:after {
+    top: 0;
+  }
+  .authorization__enter, .authorization__registration {
+    padding-right: 0;
+    padding-left: 0;
+    border: none;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .authorization__dflex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .authorization__tab:after {
+    display: none;
+  }
+  .authorization__tab {
+    display: none;
+  }
+  .authorization__info {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+  .authorization__info {
+    margin-bottom: 20px;
+  }
+  .authorization__buttons .btn.btn_black {
+    font-size: 12px;
+  }
+  .authorization__buttons {
+    margin-bottom: 15px;
+  }
+  .authorization__social p {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+  .authorization__social .btn:last-child {
+    margin-right: 0;
+  }
+  .authorization {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .authorization__buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .authorization__buttons .btn_forgot {
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 33px;
+  }
+  .authorization__buttons .btn {
+    margin-right: 0;
+  }
+  .authorization__buttons .btn.btn_black {
+    width: 300px;
+    min-width: 100%;
+  }
+}

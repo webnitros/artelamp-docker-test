@@ -1,0 +1,5 @@
+key: bxsender_returnpath_timeout
+value: '10'
+xtype: numberfield
+namespace: bxsender
+area: bxsender_returnpath

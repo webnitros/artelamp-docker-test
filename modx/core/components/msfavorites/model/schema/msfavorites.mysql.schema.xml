@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="msfavorites" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="msfavorites"
+       version="1.1">
+
+    <object class="msFavoritesList" table="msfavorites_list" extends="xPDOObject">
+        <field key="user_id" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" index="pk" />
+        <field key="msf_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" index="pk" />
+        <field key="list" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="properties" dbtype="text" phptype="json" null="true" />
+
+        <index alias="user_id" name="user_id" primary="false" unique="false" type="BTREE" >
+            <column key="user_id" length="" collation="A" null="false" />
+        </index>
+        <index alias="msf_id" name="msf_id" primary="false" unique="false" type="BTREE" >
+            <column key="msf_id" length="" collation="A" null="false" />
+        </index>
+    </object>
+
+</model>

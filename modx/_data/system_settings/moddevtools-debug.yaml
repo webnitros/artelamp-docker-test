@@ -1,0 +1,4 @@
+key: moddevtools_debug
+xtype: combo-boolean
+namespace: moddevtools
+area: moddevtools_main

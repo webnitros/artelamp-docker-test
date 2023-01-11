@@ -1,0 +1,5 @@
+key: bxsender_mailsender_port
+value: '587'
+xtype: numberfield
+namespace: bxsender
+area: bxsender_mailsender

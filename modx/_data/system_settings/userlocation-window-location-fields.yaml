@@ -1,0 +1,4 @@
+key: userlocation_window_location_fields
+value: 'id,name,name,parent,type,resource,properties'
+namespace: userlocation
+area: userlocation_main

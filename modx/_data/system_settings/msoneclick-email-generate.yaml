@@ -1,0 +1,5 @@
+key: msoneclick_email_generate
+value: '1'
+xtype: combo-boolean
+namespace: msoneclick
+area: msoneclick_user

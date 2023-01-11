@@ -1,0 +1,22 @@
+.jGrowl-notification {
+  background-color: #000 !important;
+}
+
+.msoc-message-success {
+  background-color: green !important;
+}
+
+.msoc-message-error {
+  background-color: brown !important;
+}
+
+.msoc-message-info {
+  background-color: black !important;
+}
+.vk {
+  background: url(../images/vk2.svg) no-repeat center center
+  }
+
+.telegram {
+  background: url(../images/telegram.svg) no-repeat center center
+  }

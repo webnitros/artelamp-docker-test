@@ -1,0 +1,5 @@
+key: stercseo.xmlsitemap.dependent_ultimateparent
+value: '0'
+xtype: combo-boolean
+namespace: stercseo
+area: 'XML Sitemap'

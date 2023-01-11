@@ -1,0 +1,36 @@
+Changelog for msFavorites.
+
+msFavorites 0.0.9
+==============
+- add the favorites panel (by Lev V.)
+
+msFavorites 0.0.8
+==============
+- add snippet msfGetCount
+
+msFavorites 0.0.7
+==============
+- add properties
+- add snippet msfProducts
+
+msFavorites 0.0.6
+==============
+- fix mysql.schema.xml
+- fix count in favorites list
+
+msFavorites 0.0.5
+==============
+- add storing in session
+- fix del resources
+
+msFavorites 0.0.4
+==============
+- all refactoring.
+- add favorites list in the database
+- add lists user
+- add snippet msFavoritesList
+- del storing in session !!!
+
+msFavorites 0.0.3
+==============
+- Initial release.

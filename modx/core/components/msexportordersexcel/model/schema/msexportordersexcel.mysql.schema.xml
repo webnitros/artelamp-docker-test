@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="msexportordersexcel" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="msexportordersexcel"
+       version="1.1">
+
+    <object class="msExportOrdersExcelProfile" table="msexportordersexcel_profile" extends="xPDOSimpleObject">
+
+        <field key="namespace" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+        <field key="namespace_path" dbtype="varchar" precision="256" phptype="string" null="false" default=""/>
+        <field key="classKey" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+        <field key="name" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+        <field key="tab" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+
+        <field key="limit" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="true" default="0"/>
+        <field key="start" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="true" default="0"/>
+        <field key="sort" dbtype="varchar" precision="30" phptype="string" null="false" default=""/>
+        <field key="dir" dbtype="varchar" precision="10" phptype="string" null="false" default=""/>
+
+        <field key="last_start_run" dbtype="int" precision="11" phptype="timestamp" null="true" />
+        <field key="last_end_run" dbtype="int" precision="11" phptype="timestamp" null="true" />
+
+        <field key="date_process" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="true" default=""/>
+        <field key="date_format" dbtype="varchar" precision="50" phptype="string" null="false" default="-"/>
+
+        <field key="classExport" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+        <field key="classExportList" dbtype="varchar" precision="100" phptype="string" null="false" default="xls,xlsx,csv,json"/>
+        <field key="area" dbtype="varchar" precision="256" phptype="string" null="false" default=""/>
+        <field key="delimiter" dbtype="varchar" precision="50" phptype="string" null="true" default=""/>
+
+        <field key="source" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="true" default="0"/>
+        <field key="path" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+        <field key="dependent_profile" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+
+        <field key="processor" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+        <field key="filename" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+
+        <field key="download" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="true" default="0"/>
+        <field key="remove" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="true" default="0"/>
+
+        <field key="line_grouping" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="true" default="0"/>
+        <field key="line_grouping_show" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="true" default="0"/>
+
+        <field key="head_process" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="0"/>
+        <field key="head_color" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+        <field key="head_all" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="0"/>
+        <field key="head_freezepane" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="0"/>
+        <field key="hide_colump" dbtype="varchar" precision="256" phptype="string" null="false" default=""/>
+        <field key="height" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+        <field key="width" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+
+        <field key="where" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="select" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="leftjoin" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="innerjoin" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="style" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="relatedObjects" dbtype="text" phptype="string" null="true" default=""/>
+        <field key="json_process" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="true" default=""/>
+
+        <field key="groupby" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+        <field key="having" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+
+        <field key="active" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="1"/>
+
+        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
+            <column key="name" length="" collation="A" null="false"/>
+        </index>
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE">
+            <column key="active" length="" collation="A" null="false"/>
+        </index>
+
+        <validation>
+            <rule field="source"
+                  name="preventBlank"
+                  type="xPDOValidationRule"
+                  rule="xPDOForeignKeyConstraint"
+                  foreign="id"
+                  local="source"
+                  alias="Source"
+                  class="sources.modMediaSource"
+                  message="msexportordersexcel_err_source"
+            />
+           <rule field="name"
+                  name="preventBlank"
+                  type="xPDOValidationRule"
+                  rule="xPDOMinLengthValidationRule"
+                  value="1"
+                  message="msexportordersexcel_err_name"
+            />
+        </validation>
+
+        <aggregate alias="Source" class="sources.modMediaSource" local="source" foreign="id" owner="foreign" cardinality="one" />
+        <composite alias="Fields" class="msExportOrdersExcelProfileFields" local="id" foreign="profile_id" cardinality="many" owner="local"/>
+        <aggregate alias="Dependent" class="msExportOrdersExcelProfile" local="dependent_profile" foreign="name" cardinality="one" owner="local"/>
+    </object>
+
+
+    <object class="msExportOrdersExcelProfileFields" table="msexportordersexcel_profile_fields" extends="xPDOObject">
+
+        <field key="profile_id" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" index="pk"/>
+        <field key="field" dbtype="varchar" precision="100" phptype="string" null="false" default="" index="pk"/>
+        <field key="value" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+        <field key="width" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="true" default="20"/>
+        <field key="handler" dbtype="varchar" precision="100" phptype="string" null="true" default=""/>
+        <field key="alignment_horizontal" dbtype="varchar" precision="100" phptype="string" null="true" default=""/>
+        <field key="alignment_vertical" dbtype="varchar" precision="100" phptype="string" null="true" default=""/>
+        <field key="rank" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="true" default="0"/>
+        <field key="active" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="1"/>
+
+        <index alias="profile_id" name="profile_id" primary="false" unique="false" type="BTREE">
+            <column key="profile_id" length="" collation="A" null="false"/>
+        </index>
+        <index alias="field" name="field" primary="false" unique="false" type="BTREE">
+            <column key="field" length="" collation="A" null="false"/>
+        </index>
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE">
+            <column key="active" length="" collation="A" null="false"/>
+        </index>
+
+
+        <index alias="PRIMARY" name="PRIMARY" primary="true" unique="true" type="BTREE">
+            <column key="profile_id" length="" collation="A" null="false"/>
+            <column key="field" length="" collation="A" null="false"/>
+        </index>
+
+
+        <validation>
+            <rule field="profile_id"
+                  name="preventBlank"
+                  type="xPDOValidationRule"
+                  rule="xPDOForeignKeyConstraint"
+                  foreign="id"
+                  local="profile_id"
+                  alias="Profile"
+                  class="msExportOrdersExcelProfile"
+                  message="msexportordersexcel_err_profile"
+            />
+        </validation>
+        <aggregate alias="Profile" class="msExportOrdersExcelProfile" local="profile_id" foreign="id" owner="foreign" cardinality="one"/>
+    </object>
+
+</model>

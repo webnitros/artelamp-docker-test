@@ -1,0 +1,4 @@
+key: msfavorites_ms_front_js
+value: '[[+assetsUrl]]js/web/default.js'
+namespace: msfavorites
+area: msfavorites_main

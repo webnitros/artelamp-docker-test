@@ -1,0 +1,5 @@
+key: mspc2_order_status_paid
+value: '2'
+xtype: numberfield
+namespace: mspromocode2
+area: mspc2_order

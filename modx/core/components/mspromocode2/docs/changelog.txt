@@ -1,0 +1,172 @@
+1.1.21-beta2
+==============
+- Fixed applying a discount to the whole cart at checkout
+
+1.1.21-beta
+==============
+- Fixed applying a discount to the whole cart at checkout
+
+1.1.20-beta
+==============
+- Fixed exclusion of msOptionsPrice modifications with the old price
+
+1.1.19-beta
+==============
+- Added support for `allcart` field to the `mspc2Manager::generateCoupon` method
+
+1.1.18-beta
+==============
+- Added event plugin `mspc2OnSetProductDiscountPrice`
+- Added `discount_price` and `discount_cost` keys for product of cart
+- Refactoring: moved the logic of getting a coupon from a placeholder (needed to recalculate the discount on orders) to the `mspc2Manager::getCurrentCoupon` method
+
+1.1.17-beta
+==============
+- Fixed "Discount for all cart" option
+
+1.1.16-beta
+==============
+- Added additional initialization method `mspc2Manager::initialize`
+- Fixed work in other contexts
+
+1.1.15-beta
+==============
+- Added ability to limit the application of promotional code to the entire cart only by the presence of certain goods in the cart
+- Added "Do not apply without discount" function for the whole shopping cart discounted promotional code
+
+1.1.14-pl
+==============
+- Fixed all shopping cart discounts functionality
+
+1.1.14-beta
+==============
+- Added option "Discount on all cart" for promo-code
+
+1.1.13-beta3
+==============
+- Fixed using setting `mspc2_backend_coupons_default_list`
+
+1.1.13-beta2
+==============
+- Fixed dev resolver
+
+1.1.13-beta
+==============
+- Added setting `mspc2_backend_coupons_default_list`
+
+1.1.12-beta3
+==============
+- Fixed method `mspc2Manager::generateCoupon`
+
+1.1.12-beta2
+==============
+- Fixed method `mspc2Manager::generateCoupon`
+
+1.1.12-beta
+==============
+- Added public method `mspc2Manager::generateCoupon`
+- Added additional parameters for snippet `mspc2Generate`
+- Added countdown for snippet `mspc2Generate`
+- Added countdown to chunk `tpl.msPromoCode2.generate`
+- Added countdown to JS class `msPromoCode2Generate`
+- Fixed receiving the old price in event `msOnGetProductPrice` and the related error "Call to a member function get() on null" when the value of `$product` is null
+
+1.1.11-beta2
+==============
+- Fixed generate promocode for guests
+
+1.1.11-beta
+==============
+- Added getting additional categories from msCategoryMember
+
+1.1.10-beta
+==============
+- Fixed an error with overwriting the session
+
+1.1.9-beta2
+==============
+- Fixed working without msOptionsPrice2
+
+1.1.9-beta
+==============
+- Fixed working without msOptionsPrice2
+
+1.1.8-beta
+==============
+- Fixed invoking mspc2OnBeforeGetCoupon event
+- Fixed invoke mspc2OnGetCoupon event
+- Fixed getting coupon code on unset coupon from order in backend
+- Fixed showing info messages
+
+1.1.7-beta2
+==============
+- Fixed Russian language
+
+1.1.7-beta
+==============
+- Added partial English language
+
+1.1.6-beta2
+==============
+- Fixed value in `_call_from` placeholder on calling method mspc2Manager::refreshCartDiscount
+
+1.1.6-beta
+==============
+- Fixed updating not wrapped discount amount
+- Fixed multiple prices updating for items in cart
+
+1.1.5-beta
+==============
+- Added option "Show info messages" for promo-code
+
+1.1.4-beta2
+==============
+- Fixed actions column padding in manager page
+- Fixed loading miniShop2 lexicon
+
+1.1.4-beta
+==============
+- Fixed link between msOrder object and mspc2CouponOrder object
+
+1.1.3-pl2
+==============
+- Fixed prepare product prices in mspc2Manager class
+
+1.1.3-pl
+==============
+- Fixed checking cart product options in snippet mspc2CartKey
+
+1.1.3-beta
+==============
+- Added option "Without old price" for promo-code
+
+1.1.2-beta
+==============
+- Fixed notices in form snippet
+- Fixed a non-numeric value encountered
+
+1.1.1-beta
+==============
+- Fixed set version for frontend styles and scripts
+
+1.1.0-beta
+==============
+- Added smart processing cart
+- Added list field for promo-code
+- Added config tab for promo-code
+- Added option "Dont apply without discount" for promo-code
+- Added option "Discount on one unit of product" for promo-code
+- Added option "Show discount price only in cart" for promo-code
+- Added setting "mspc2_min_price"
+- Added snippet `mspc2Generate`
+- Added info messages
+- Changed logic of apply coupon for order
+
+1.0.1-beta
+==============
+- Fixed refresh order cost on set/unset promo-code
+- Fixed extension resolver
+
+1.0.0-beta
+==============
+- Start

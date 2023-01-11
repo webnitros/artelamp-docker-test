@@ -1,0 +1,5 @@
+key: readlogjson_combo_boolean
+value: '1'
+xtype: combo-boolean
+namespace: readlogjson
+area: readlogjson_main

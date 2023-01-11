@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="readlogjson" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="readlogjson"
+       version="1.1">
+
+    <object class="ReadLogJsonRequest" table="readlogjson_requests" extends="xPDOSimpleObject">
+        <field key="timeout" dbtype="int" precision="10" phptype="integer" null="false" default="1"/>
+
+        <field key="url" dbtype="varchar" precision="500" phptype="string" null="false"/>
+        <field key="method" dbtype="varchar" precision="255" phptype="string" null="false"/>
+        <field key="event" dbtype="varchar" precision="255" phptype="string" null="false"/>
+
+        <field key="request" dbtype="text" phptype="json" null="true"/>
+        <field key="response" dbtype="text" phptype="json" null="true"/>
+
+        <field key="msg" dbtype="varchar" precision="500" phptype="string" null="true"/>
+
+        <field key="error" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="0"/>
+
+        <field key="read" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="0"/>
+        <field key="read_in" dbtype="int" precision="20" phptype="timestamp" null="false" default="0"/>
+
+        <field key="processed" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="0"/>
+        <field key="processed_in" dbtype="int" precision="20" phptype="timestamp" null="false" default="0"/>
+
+        <field key="createdon" dbtype="int" precision="20" phptype="timestamp" null="false" default="0"/>
+
+        <field key="updatedon" dbtype="int" precision="20" phptype="timestamp" null="false" default="0"/>
+
+        <index alias="event" name="event" primary="false" unique="false" type="BTREE">
+            <column key="event" length="" collation="A" null="false"/>
+        </index>
+
+        <index alias="read" name="read" primary="false" unique="false" type="BTREE">
+            <column key="read" length="" collation="A" null="false"/>
+        </index>
+
+        <index alias="read_in" name="read_in" primary="false" unique="false" type="BTREE">
+            <column key="read_in" length="" collation="A" null="false"/>
+        </index>
+
+        <index alias="processed" name="processed" primary="false" unique="false" type="BTREE">
+            <column key="processed" length="" collation="A" null="false"/>
+        </index>
+
+        <index alias="processed_in" name="processed_in" primary="false" unique="false" type="BTREE">
+            <column key="processed_in" length="" collation="A" null="false"/>
+        </index>
+
+        <index alias="createdon" name="createdon" primary="false" unique="false" type="BTREE">
+            <column key="createdon" length="" collation="A" null="false"/>
+        </index>
+
+        <index alias="updatedon" name="updatedon" primary="false" unique="false" type="BTREE">
+            <column key="updatedon" length="" collation="A" null="false"/>
+        </index>
+
+    </object>
+
+</model>

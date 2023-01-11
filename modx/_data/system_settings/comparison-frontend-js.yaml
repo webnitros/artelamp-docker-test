@@ -1,0 +1,4 @@
+key: comparison_frontend_js
+value: '[[+assetsUrl]]js/default.js'
+namespace: comparison
+area: comparison_main

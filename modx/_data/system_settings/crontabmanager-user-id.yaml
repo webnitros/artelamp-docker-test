@@ -1,0 +1,5 @@
+key: crontabmanager_user_id
+value: '1'
+xtype: numberfield
+namespace: crontabmanager
+area: crontabmanager_main

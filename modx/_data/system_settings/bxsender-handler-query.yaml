@@ -1,0 +1,4 @@
+key: bxsender_handler_query
+value: bxQueryHandler
+namespace: bxsender
+area: bxsender_main

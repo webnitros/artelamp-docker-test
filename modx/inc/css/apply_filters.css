@@ -1,0 +1,165 @@
+
+/* Кнопка показать результаты */
+.apply-filters-float-btn {
+    position: absolute;
+    width: auto;
+    font-size: 14px;
+    margin-left: 25px;
+    z-index: 8;
+    padding: 13px 10px  13px 20px;
+    white-space: nowrap;
+    background: #c4c4c4;
+    right: -170px;
+    max-height: 40px;
+    cursor: pointer;
+}
+/*.apply-filters-float-btn:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: -40px;
+    top: 0;
+    background: url(../images/lookbeflist.png) no-repeat left center;
+    background-size: auto 40px;
+}*/
+
+
+.apply-filters-float-btn:before {
+    display: block;
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg, #c4c4c4, #c4c4c4);
+    transform: rotate(135deg);
+    z-index: 0;
+
+    left: -13px;
+    top: 6px;
+    width: 28px;
+    height: 28px;
+}
+
+.apply-filters-float-btn:after {
+    border-radius: 8px;
+    box-shadow: inherit;
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: inherit;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+}
+
+/*
+.apply-filters-float-btn {
+    border-radius: 8px;
+    width: 80px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 30px;
+    height: 44px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(to top, #da4e13, #e1601e);
+    font-weight: bold;
+    position: absolute;
+    right: -90px;
+    margin-top: 14px;
+    z-index: 8
+}*/
+
+.apply-filters-text,.apply-filters-total {
+    display: inline-block;
+}
+.apply-filters-float-btn .corner {
+    height: 30px;
+}
+
+/*.apply-filters-float-btn .sk-wave {
+    position: absolute;
+    z-index: 1111;
+    left: 0;
+    top: 19px;
+    text-align: center;
+    width: 77px;
+    font-size: 12px;
+    font-weight: normal;
+}*/
+
+@media (max-width: 992px) {
+    .apply-filters-float-btn {
+       display: none;
+    }
+}
+
+
+
+.sk-wave {
+    width: 6em;
+    height: 12px;
+    margin: auto;
+    text-align: center;
+}
+
+.sk-wave .sk-rect {
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    margin: 0 1px;
+    width: 2px;
+    display: inline-block;
+    -webkit-animation: sk-wave-stretch-delay 1.2s infinite ease-in-out;
+    animation: sk-wave-stretch-delay 1.2s infinite ease-in-out;
+}
+
+.sk-wave .sk-rect-1 {
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s;
+}
+
+.sk-wave .sk-rect-2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.sk-wave .sk-rect-3 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+.sk-wave .sk-rect-4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.sk-wave .sk-rect-5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-wave-stretch-delay {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}
+
+@keyframes sk-wave-stretch-delay {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4);
+    }
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+}

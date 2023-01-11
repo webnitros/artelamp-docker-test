@@ -1,0 +1,5 @@
+key: antibot_disable_remove_statistics
+value: '1'
+xtype: combo-boolean
+namespace: antibot
+area: antibot_main

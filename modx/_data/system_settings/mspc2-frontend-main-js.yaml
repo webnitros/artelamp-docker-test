@@ -1,0 +1,4 @@
+key: mspc2_frontend_main_js
+value: '[[+jsUrl]]web/main.js'
+namespace: mspromocode2
+area: mspc2_frontend

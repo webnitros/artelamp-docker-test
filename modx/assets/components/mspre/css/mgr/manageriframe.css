@@ -1,0 +1,22 @@
+#modx-header, #modx-leftbar {
+    display: none !important;
+}
+
+#modx-content {
+    top: 0 !important;
+}
+
+#modx-action-buttons-container #modx-action-buttons {
+    top: 6px;
+}
+
+#modx-action-buttons .x-btn  {
+    display: none !important;
+}
+#modx-action-buttons #modx-abtn-save.x-btn, #modx-action-buttons #modx-abtn-preview.x-btn {
+    display: block !important;
+}
+.x-window .x-window-body {
+    padding: 0 !important;
+    overflow-y: hidden;
+}

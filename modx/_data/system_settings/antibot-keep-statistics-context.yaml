@@ -1,0 +1,4 @@
+key: antibot_keep_statistics_context
+xtype: combo-boolean
+namespace: antibot
+area: antibot_main

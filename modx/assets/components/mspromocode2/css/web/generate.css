@@ -1,0 +1,154 @@
+/**
+ *
+ */
+.mspc2-generate {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: calc(100% - 220px - 20px);
+    width: 220px;
+    background-color: #ed3a45;
+    padding: .7rem .75rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, .08);
+    color: #fff;
+    z-index: 999;
+}
+.mspc2-generate.is-expired {
+    background-color: #bbb;
+}
+
+/**
+ *
+ */
+.mspc2-generate__discount {
+    padding: 0 0 .7rem;
+    margin: 0 0 .7rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .7);
+    font-size: 2.2em;
+    line-height: 1em;
+}
+.mspc2-generate__title {
+    font-size: .95em;
+    line-height: 1.4em;
+}
+.mspc2-generate__code {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    padding: .5rem .65rem;
+    border-radius: 25px;
+    margin: .5rem 0 0;
+    color: #333;
+    font-size: .85em;
+    line-height: 1em;
+}
+.is-expired .mspc2-generate__code {
+    background-color: rgba(255, 255, 255, .7);
+}
+.mspc2-generate__code,
+.mspc2-generate__code:hover,
+.mspc2-generate__code:focus {
+    outline: none;
+    border: 0;
+    text-decoration: none;
+}
+.mspc2-generate__code:active {
+    margin: calc(.5rem + 1px) -1px -1px 1px;
+}
+.mspc2-generate__code-label {
+    font-size: .9em;
+    line-height: 1em;
+}
+.mspc2-generate__code-value {
+    padding-left: .2rem;
+    font-weight: 600;
+}
+.mspc2-generate__code-copied {
+    display: none;
+}
+.mspc2-generate.is-copied .mspc2-generate__code-label,
+.mspc2-generate.is-copied .mspc2-generate__code-value {
+    display: none;
+}
+.mspc2-generate.is-copied .mspc2-generate__code-copied {
+    display: block;
+}
+
+/**
+ *
+ */
+.mspc2-generate__clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5rem 0 0;
+}
+.mspc2-generate__clock-label {
+    padding: 0 .25rem 0 0;
+}
+.mspc2-generate__clock-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 0 0 0 .25rem;
+    font-size: 1.2em;
+    line-height: 1em;
+}
+.mspc2-generate__clock-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mspc2-generate__clock-number:after {
+    content: ':';
+    display: block;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.mspc2-generate__clock-number_hours {
+
+}
+.mspc2-generate__clock-number_minutes {
+
+}
+.mspc2-generate__clock-number_seconds {
+
+}
+.mspc2-generate__clock-number_seconds:after {
+    display: none;
+}
+
+/**
+ *
+ */
+.mspc2-generate__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    padding: 0;
+    color: #fff;
+    opacity: .6;
+}
+.mspc2-generate__close,
+.mspc2-generate__close:hover,
+.mspc2-generate__close:focus {
+    outline: none;
+    border: 0;
+    text-decoration: none;
+}
+.mspc2-generate__close:hover {
+    color: #fff;
+    opacity: .9;
+}
+.mspc2-generate__close-svg {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+    color: inherit;
+}

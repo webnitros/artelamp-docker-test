@@ -1,0 +1,5 @@
+key: smartsessions_bots_gc_maxlifetime
+value: '604800'
+xtype: numberfield
+namespace: smartsessions
+area: smartsessions_main

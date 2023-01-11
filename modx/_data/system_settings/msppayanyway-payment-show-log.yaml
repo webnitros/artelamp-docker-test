@@ -1,0 +1,4 @@
+key: msppayanyway_payment_show_log
+xtype: combo-boolean
+namespace: msppayanyway
+area: msppayanyway_main

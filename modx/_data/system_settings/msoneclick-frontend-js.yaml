@@ -1,0 +1,4 @@
+key: msoneclick_frontend_js
+value: '[[+jsUrl]]web/default.js'
+namespace: msoneclick
+area: msoneclick

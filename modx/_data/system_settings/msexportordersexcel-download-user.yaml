@@ -1,0 +1,4 @@
+key: msexportordersexcel_download_user
+xtype: combo-boolean
+namespace: msexportordersexcel
+area: msexportordersexcel_excel

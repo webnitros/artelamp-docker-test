@@ -1,0 +1,4 @@
+key: bxsender_frontend_js
+value: '{assets_url}components/bxsender/js/web/default.js'
+namespace: bxsender
+area: bxsender_main

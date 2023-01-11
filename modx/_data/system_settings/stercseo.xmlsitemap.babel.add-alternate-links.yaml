@@ -1,0 +1,5 @@
+key: stercseo.xmlsitemap.babel.add_alternate_links
+value: '1'
+xtype: combo-boolean
+namespace: stercseo
+area: 'XML Sitemap'

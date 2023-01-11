@@ -1,0 +1,102 @@
+/**
+ * Reset inner elements
+ */
+.mspc2 * {
+    box-sizing: border-box !important;
+    outline: none !important;
+}
+
+/**
+ * Wrapper
+ */
+.mspc2 {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+.mspc2.is-loading {
+    opacity: .5;
+}
+
+/**
+ * Form
+ */
+.mspc2-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    max-width: 500px;
+    margin-right: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+/**
+ * Form / Input
+ */
+.mspc2-form__input {
+    flex: 1;
+    padding-left: .5rem;
+    border: 0;
+    border-radius: 2px 0 0 2px;
+}
+.is-active .mspc2-form__input {
+}
+
+/**
+ * Form / Button
+ */
+.mspc2-form__button {
+    background-color: #e3e3e3;
+    padding: .7rem .75rem;
+    border: 0;
+    border-radius: 0 2px 2px 0;
+    color: #222;
+    font-size: 1em;
+    line-height: 1em;
+}
+.mspc2-form__button:hover {
+    /*background-color: #e3e3e3;*/
+}
+.mspc2-form__button_submit {
+    display: inline-block;
+}
+.mspc2-form__button_cancel {
+    display: none;
+}
+.is-active .js-mspc2-submit {
+    display: none;
+}
+.is-active .js-mspc2-cancel {
+    display: inline-block;
+}
+
+/**
+ * Description
+ */
+.mspc2-description {
+    width: 100%;
+    margin: .25rem 0;
+    font-size: .85em;
+    line-height: 1.4em;
+}
+
+/**
+ * Message
+ */
+.mspc2-message {
+    width: 100%;
+}
+.mspc2-message__success {
+    color: #3a960d;
+}
+.mspc2-message__error {
+    color: #ec1049;
+}
+.mspc2-message__info {
+    color: goldenrod;
+}

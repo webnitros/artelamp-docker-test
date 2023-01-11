@@ -1,0 +1,5 @@
+key: extraext_copyright
+value: '1'
+xtype: combo-boolean
+namespace: extraext
+area: copyright

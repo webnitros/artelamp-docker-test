@@ -1,0 +1,4 @@
+key: admintools_email_authorization
+xtype: combo-boolean
+namespace: admintools
+area: admintools_authorization

@@ -1,0 +1,4 @@
+key: bxsender_page_confirmationemail
+xtype: numberfield
+namespace: bxsender
+area: bxsender_main

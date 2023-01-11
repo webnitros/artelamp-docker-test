@@ -1,0 +1,17 @@
+{
+  "name": "astep/readlogjson",
+  "autoload": {
+    "psr-4": {
+      "Readlogjson\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Андрей",
+      "email": "info@bustep.ru"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.5"
+  }
+}

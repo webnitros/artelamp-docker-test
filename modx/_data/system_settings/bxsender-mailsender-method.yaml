@@ -1,0 +1,4 @@
+key: bxsender_mailsender_method
+value: ajax
+namespace: bxsender
+area: bxsender_mailsender

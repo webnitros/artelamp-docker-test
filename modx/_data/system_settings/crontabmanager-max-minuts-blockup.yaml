@@ -1,0 +1,5 @@
+key: crontabmanager_max_minuts_blockup
+value: '1440'
+xtype: numberfield
+namespace: crontabmanager
+area: crontabmanager_blocking

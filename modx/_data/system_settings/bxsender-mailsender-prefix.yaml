@@ -1,0 +1,4 @@
+key: bxsender_mailsender_prefix
+value: tls
+namespace: bxsender
+area: bxsender_mailsender

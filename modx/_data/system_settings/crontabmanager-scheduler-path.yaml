@@ -1,0 +1,4 @@
+key: crontabmanager_scheduler_path
+value: '{core_path}scheduler'
+namespace: crontabmanager
+area: crontabmanager_path

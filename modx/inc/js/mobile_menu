@@ -1,0 +1,15 @@
+$(document).ready(function () {
+
+    // Клик из мобильной версии по кнопке добавить в корзину
+    $(document).on('click', '.btn_link_add_to_cart', function (e) {
+        if ($(this).closest('.unit').length) {
+            if ($(this).closest('.unit').find('.ms2_form').length) {
+                if ($(this).closest('.unit').find('.ms2_form').find('.btn_buy').length) {
+                    var $buttomCartID = $(this).closest('.unit').find('.ms2_form').find('.btn_buy')
+                    $buttomCartID.click()
+                }
+            }
+        }
+        return true
+    })
+})

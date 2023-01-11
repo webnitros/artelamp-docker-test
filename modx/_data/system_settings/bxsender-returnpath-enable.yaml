@@ -1,0 +1,4 @@
+key: bxsender_returnpath_enable
+xtype: combo-boolean
+namespace: bxsender
+area: bxsender_returnpath

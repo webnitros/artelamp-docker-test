@@ -1,0 +1,5 @@
+key: crontabmanager_log_storage_time
+value: '10080'
+xtype: numberfield
+namespace: crontabmanager
+area: crontabmanager_main

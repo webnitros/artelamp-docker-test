@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="mspre" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="mspre"
+       version="1.1">
+
+    <object class="mspreTvField" table="mspre_tv_field" extends="xPDOSimpleObject">
+        <field key="name" dbtype="varchar" precision="50" phptype="string" null="false" default="" index="unique" />
+        <field key="xtype_old" dbtype="varchar" precision="100" phptype="string" null="false" default="" index="index" />
+        <field key="xtype_new" dbtype="varchar" precision="100" phptype="string" null="false" default="" index="index" />
+        <field key="xtype_grid" dbtype="varchar" precision="100" phptype="string" null="true" default="" index="index" />
+        <field key="separator" dbtype="varchar" precision="100" phptype="string" null="false" default="" index="index" />
+        <field key="separator_between" dbtype="varchar" precision="100" phptype="string" null="false" default="" index="index" />
+        <field key="comment" dbtype="text" phptype="string" null="true" />
+        <field key="createdon" dbtype="datetime" phptype="datetime" null="false" default="0000-00-00 00:00:00" />
+        <field key="updatedon" dbtype="datetime" phptype="datetime" null="false" default="0000-00-00 00:00:00" />
+        <field key="isadd" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="0"/>
+        <field key="isreplace" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="0"/>
+        <field key="isclear" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="0"/>
+        <field key="active" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="0"/>
+
+        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
+            <column key="name" length="" collation="A" null="false"/>
+        </index>
+        <aggregate alias="Tv" class="modTemplateVar" local="name" foreign="type" cardinality="one" owner="foreign" />
+    </object>
+
+
+    <object class="mspreTransactions" table="mspre_transactions" extends="xPDOSimpleObject">
+        <field key="product_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" index="index"/>
+        <field key="field" dbtype="varchar" precision="50" phptype="string" null="false" default=""  />
+        <field key="round" dbtype="varchar" precision="50" phptype="string" null="false" default=""  />
+        <field key="increase" dbtype="varchar" precision="50" phptype="string" null="false" default=""  />
+
+        <field key="updatedon" dbtype="datetime" phptype="datetime" null="true" />
+
+        <field key="oldValue" dbtype="decimal" precision="12,2" phptype="float" null="true" default="0"/>
+        <field key="newValue" dbtype="decimal" precision="12,2" phptype="float" null="true" default="0"/>
+
+
+        <index alias="product_id" name="product_id" primary="false" unique="false" type="BTREE">
+            <column key="product_id" length="" collation="A" null="false"/>
+        </index>
+        <aggregate alias="Tv" class="modTemplateVar" local="id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+</model>

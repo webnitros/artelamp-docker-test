@@ -1,0 +1,291 @@
+.authorization {
+  padding-top: 20px;
+  margin-bottom: 110px;
+}
+
+.authorization__tab_buttons {
+  display: none;
+}
+
+.authorization__dflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.authorization__enter {
+  min-width: 50%;
+  max-width: 50%;
+  border-right: 1px solid #C4C4C4;
+  padding-right: 33px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.authorization__registration {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-left: 33px;
+  padding-bottom: 30px;
+}
+
+.authorization__tab {
+  position: relative;
+}
+
+.authorization__tab:after {
+  content: '';
+  position: absolute;
+  z-index: 6;
+  top: 50px;
+  left: 0px;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.8;
+  background: #ffffff;
+}
+
+.authorization__tab.active::after {
+  display: none;
+}
+
+.authorization .authorization__tab.active .authorization__headline {
+  background: #EEEEEE;
+}
+
+.authorization .authorization__tab.active .authorization__headline:before {
+  background: url("../images/lk/head_radioy.svg") no-repeat left center/14px auto;
+}
+
+.authorization__headline {
+  font-size: 15px;
+  line-height: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #eeeeee;
+  background: #ffffff;
+  font-family: 'fm';
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 34px;
+}
+
+.authorization__headline:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  top: 50%;
+  margin-top: -7px;
+  left: 13px;
+  background: url("../images/lk/head_radio.svg") no-repeat left center/14px auto;
+}
+
+.authorization__controll {
+  height: 40px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.authorization__controll input {
+  padding-left: 50px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #000000;
+  font-size: 15px;
+  background: transparent;
+}
+
+.authorization__controll:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  background: #000000;
+  left: 40px;
+  top: 0;
+  height: 40px;
+  width: 1px;
+}
+
+.authorization__controll-email {
+  background: url("../images/lk/email_ic.svg") no-repeat 11px center/18px auto;
+}
+
+.authorization__controll-password {
+  background: url("../images/lk/pass_ic.svg") no-repeat 11px center/18px auto;
+}
+
+.authorization__info {
+  padding-top: 15px;
+  font-size: 14px;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+.authorization__info a {
+  color: #2399E2;
+}
+
+.authorization__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.authorization__buttons .btn {
+  width: 220px;
+  height: 40px;
+  margin: auto 20px auto 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: 'fm';
+  padding: 0 25px;
+}
+
+.authorization__buttons .btn_forgot {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 15px;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.authorization__buttons .btn_forgot:hover {
+  text-decoration: none;
+}
+
+.authorization__social p {
+  font-size: 15px;
+  line-height: 200%;
+  margin-bottom: 30px;
+}
+
+.authorization__social .btn {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 14px;
+  border-radius: 0;
+  border: 1px solid #000000;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.authorization__social .btn_google {
+  background: #000000 url("../images/lk/google_ic.svg") no-repeat center center/24px auto;
+}
+
+.authorization__social .btn_google:hover {
+  background: #ffffff url("../images/lk/google_ich.svg") no-repeat center center/24px auto;
+}
+
+.authorization__social .btn_ok {
+  background: #000000 url("../images/lk/ok_ic.svg") no-repeat center center/15px auto;
+}
+
+.authorization__social .btn_ok:hover {
+  background: #ffffff url("../images/lk/ok_ich.svg") no-repeat center center/15px auto;
+}
+
+.authorization__social .btn_fb {
+  background: #000000 url("../images/lk/fb_ic.svg") no-repeat center center/15px auto;
+}
+
+.authorization__social .btn_fb:hover {
+  background: #ffffff url("../images/lk/fb_ich.svg") no-repeat center center/15px auto;
+}
+
+.authorization__social .btn_inst {
+  background: #000000 url("../images/lk/inst_ic.svg") no-repeat center center/21px auto;
+}
+
+.authorization__social .btn_inst:hover {
+  background: #ffffff url("../images/lk/inst_ich.svg") no-repeat center center/21px auto;
+}
+
+.authorization__social .btn_vk {
+  background: #000000 url("../images/lk/vk_ic.svg") no-repeat center center/25px auto;
+}
+
+.authorization__social .btn_vk:hover {
+  background: #ffffff url("../images/lk/vk_ich.svg") no-repeat center center/25px auto;
+}
+
+.authorization__preference {
+  margin-top: -9px;
+  padding-bottom: 14px;
+}
+
+.authorization__preference li {
+  font-size: 15px;
+  position: relative;
+  display: block;
+  padding-left: 31px;
+  line-height: 17px;
+  margin-bottom: 31px;
+}
+
+.authorization__preference li:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 3px;
+  height: 3px;
+  background: #c4c4c4;
+  border-radius: 50%;
+  left: 11px;
+  top: 7px;
+}
+
+.authorization__subscribe {
+  padding-top: 22px;
+  margin-bottom: 25px;
+}
+
+.authorization__subscribe .checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+}
+
+.authorization__subscribe .checkbox + label {
+  position: relative;
+  padding: 0 0 0 40px;
+  line-height: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #000000;
+  font-family: 'fb';
+}
+
+.authorization__subscribe .checkbox + label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
+  -webkit-transition: .2s;
+  transition: .2s;
+  background: #ffffff url("../images/lk/sub_check.svg") no-repeat center center/18px auto;
+}
+
+.authorization__subscribe .checkbox:checked + label:after {
+  border: 1px solid #ff0000;
+  background: #ff0000 url("../images/lk/sub_check.svg") no-repeat center center/18px auto;
+}
+
+.authorization__reg__info {
+  font-size: 15px;
+  line-height: 2;
+  margin-top: -5px;
+}
+
+.authorization__reg__info span {
+  display: inline-block;
+}

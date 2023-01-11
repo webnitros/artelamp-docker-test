@@ -1,0 +1,31 @@
+.favorites {}
+
+a.favorites-link {
+    text-decoration: none;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+}
+a.favorites-link:hover {border-bottom-style: solid;}
+a.favorites-link.active {
+    border-bottom: none;
+    background: #efefef;
+    color: black;
+}
+
+.favorites .favorites-add {display:inline;}
+.favorites .favorites-remove,
+.favorites .favorites-go,
+.favorites .favorites-total {display:none;}
+
+.favorites.added .favorites-add {display:none;}
+.favorites.added .favorites-remove,
+.favorites.added .favorites-go,
+.favorites.added .favorites-total {display:inline;}
+
+.favorites .loading {opacity: .7;cursor:default;}
+.favorites .loading:hover {text-decoration: none;}
+
+.favorites a:hover,.favorites a:focus {
+    color: #2A6496;
+    text-decoration: none;
+}

@@ -1,0 +1,5 @@
+key: admintools_enable_notes
+value: '1'
+xtype: combo-boolean
+namespace: admintools
+area: admintools_main

@@ -1,0 +1,134 @@
+[
+  {
+    "key": "gid",
+    "value": null,
+    "default": null,
+    "category": "basic"
+  },
+  {
+    "key": "id",
+    "value": "data.article",
+    "default": "data.article",
+    "category": "product"
+  },
+  {
+    "key": "name",
+    "value": "product.pagetitle",
+    "default": "product.pagetitle",
+    "category": "product"
+  },
+  {
+    "key": "list_name",
+    "value": null,
+    "default": null,
+    "category": "product"
+  },
+  {
+    "key": "brand",
+    "value": "vendor.name",
+    "default": "vendor.name",
+    "category": "product"
+  },
+  {
+    "key": "category",
+    "value": "parent.pagetitle",
+    "default": "parent.pagetitle",
+    "category": "product"
+  },
+  {
+    "key": "variant",
+    "value": null,
+    "default": null,
+    "category": "product"
+  },
+  {
+    "key": "list_position",
+    "value": null,
+    "default": null,
+    "category": "product"
+  },
+  {
+    "key": "price",
+    "value": "data.price",
+    "default": "data.price",
+    "category": "product"
+  },
+  {
+    "key": "transaction_id",
+    "value": "order.num",
+    "default": "order.num",
+    "category": "order"
+  },
+  {
+    "key": "affiliation",
+    "value": null,
+    "default": null,
+    "category": "order"
+  },
+  {
+    "key": "value",
+    "value": "order.cost",
+    "default": "order.cost",
+    "category": "order"
+  },
+  {
+    "key": "currency",
+    "value": "RUB",
+    "default": "RUB",
+    "category": "basic"
+  },
+  {
+    "key": "tax",
+    "value": null,
+    "default": null,
+    "category": "order"
+  },
+  {
+    "key": "shipping",
+    "value": null,
+    "default": null,
+    "category": "order"
+  },
+  {
+    "key": "yid",
+    "value": null,
+    "default": null,
+    "category": "basic"
+  },
+  {
+    "key": "container",
+    "value": "yandexLayer",
+    "default": "yandexLayer",
+    "category": "yandex"
+  },
+  {
+    "key": "clickmap",
+    "value": "1",
+    "default": "1",
+    "category": "yandex"
+  },
+  {
+    "key": "trackLinks",
+    "value": "1",
+    "default": "1",
+    "category": "yandex"
+  },
+  {
+    "key": "accurateTrackBounce",
+    "value": "1",
+    "default": "1",
+    "category": "yandex"
+  },
+  {
+    "key": "webvisor",
+    "value": "1",
+    "default": "1",
+    "category": "yandex"
+  },
+  {
+    "key": "trackHash",
+    "value": "1",
+    "default": "1",
+    "category": "yandex"
+  }
+]

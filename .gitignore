@@ -30,15 +30,15 @@ Extras/
 .idea/
 .phpdoc/
 /modx/core/cache/
-/modx/core/scheduler/ControllersLinks
-/modx/core/scheduler/lock/
-/modx/core/scheduler/logs/
+/modx/core/scheduler/lock/*
+/modx/core/scheduler/logs/*
 /modx/core/packages
-/modx/assets/images/
 /modx/node_modules/
 /modx/vendor/
 
+/modx/assets/images/*
 /modx/assets/YandexDisk/*
-/modx/assets/manager/video/*
+/modx/assets/manager/*
+/modx/assets/media/*
 
 /modx/assets/cache/

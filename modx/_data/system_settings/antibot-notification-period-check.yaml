@@ -1,0 +1,4 @@
+key: antibot_notification_period_check
+value: '1 days'
+namespace: antibot
+area: antibot_notification

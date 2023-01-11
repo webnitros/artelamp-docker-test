@@ -1,0 +1,531 @@
+/* Grid */
+.readlogjson-row-disabled {
+    font-style: italic;
+    opacity: .6;
+    color: #555;
+}
+
+.x-grid3-col-actions {
+    padding: 3px 0 3px 5px;
+}
+
+/* Actions */
+.action-red {
+    color: darkred !important;
+}
+
+.action-green {
+    color: darkgreen !important;
+}
+
+.action-blue {
+    color: cadetblue !important;
+}
+
+.action-yellow {
+    color: goldenrod !important;
+}
+
+.action-gray {
+    color: dimgray !important;
+}
+
+ul.readlogjson-row-actions {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.readlogjson-row-actions li {
+    float: left;
+}
+
+ul.readlogjson-row-actions .readlogjson-btn {
+    padding: 5px;
+    margin-right: 2px;
+    min-width: 26px;
+    font-size: inherit;
+}
+
+/* Action menu */
+a.x-menu-item .x-menu-item-text, a.x-menu-item .x-menu-item-text .icon {
+    cursor: pointer;
+}
+
+a.x-menu-item .x-menu-item-text .icon {
+    line-height: 16px;
+    top: auto;
+}
+
+.x-menu-list .icon {
+    min-width: 1em;
+    text-align: center;
+}
+
+.x-menu-list-item:hover .icon {
+    color: inherit !important;
+}
+
+ul.readlogjson-row-actions .actions-menu {
+    width: 40px;
+}
+
+ul.readlogjson-row-actions .actions-menu:after {
+    content: " \f107";
+}
+
+/* Search field */
+.x-field-search-clear,
+.x-field-search-go {
+    border-left: 1px solid #e4e4e4 !important;
+}
+
+.x-field-search-clear:hover,
+.x-field-search-go:hover {
+    border-left-color: transparent !important;
+}
+
+.x-field-search-clear:before {
+    content: '\f00d' !important;
+}
+
+.x-field-search-go {
+    right: 31px !important;
+    border-radius: 0 !important;
+}
+
+.x-field-search-go:before {
+    content: '\f002' !important;
+}
+
+/* Buttons */
+.readlogjson-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.readlogjson-btn:focus, .readlogjson-btn:active:focus, .readlogjson-btn.active:focus, .readlogjson-btn.focus, .readlogjson-btn:active.focus, .readlogjson-btn.active.focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+
+.readlogjson-btn:hover, .readlogjson-btn:focus, .readlogjson-btn.focus {
+    color: #333;
+    text-decoration: none
+}
+
+.readlogjson-btn:active, .readlogjson-btn.active {
+    outline: 0;
+    background-image: none;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+}
+
+.readlogjson-btn.disabled, .readlogjson-btn[disabled], fieldset[disabled] .readlogjson-btn {
+    cursor: not-allowed;
+    opacity: .65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+a.readlogjson-btn.disabled, fieldset[disabled] a.readlogjson-btn {
+    pointer-events: none
+}
+
+.readlogjson-btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc
+}
+
+.readlogjson-btn-default:focus, .readlogjson-btn-default.focus {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #8c8c8c
+}
+
+.readlogjson-btn-default:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad
+}
+
+.readlogjson-btn-default:active, .readlogjson-btn-default.active, .open > .dropdown-toggle.readlogjson-btn-default {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad
+}
+
+.readlogjson-btn-default:active:hover, .readlogjson-btn-default.active:hover, .open > .dropdown-toggle.readlogjson-btn-default:hover, .readlogjson-btn-default:active:focus, .readlogjson-btn-default.active:focus, .open > .dropdown-toggle.readlogjson-btn-default:focus, .readlogjson-btn-default:active.focus, .readlogjson-btn-default.active.focus, .open > .dropdown-toggle.readlogjson-btn-default.focus {
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c
+}
+
+.readlogjson-btn-default:active, .readlogjson-btn-default.active, .open > .dropdown-toggle.readlogjson-btn-default {
+    background-image: none
+}
+
+.readlogjson-btn-default.disabled:hover, .readlogjson-btn-default[disabled]:hover, fieldset[disabled] .readlogjson-btn-default:hover, .readlogjson-btn-default.disabled:focus, .readlogjson-btn-default[disabled]:focus, fieldset[disabled] .readlogjson-btn-default:focus, .readlogjson-btn-default.disabled.focus, .readlogjson-btn-default[disabled].focus, fieldset[disabled] .readlogjson-btn-default.focus {
+    background-color: #fff;
+    border-color: #ccc
+}
+
+.readlogjson-btn-default .badge {
+    color: #fff;
+    background-color: #333
+}
+
+.readlogjson-btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4
+}
+
+.readlogjson-btn-primary:focus, .readlogjson-btn-primary.focus {
+    color: #fff;
+    background-color: #286090;
+    border-color: #122b40
+}
+
+.readlogjson-btn-primary:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74
+}
+
+.readlogjson-btn-primary:active, .readlogjson-btn-primary.active, .open > .dropdown-toggle.readlogjson-btn-primary {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74
+}
+
+.readlogjson-btn-primary:active:hover, .readlogjson-btn-primary.active:hover, .open > .dropdown-toggle.readlogjson-btn-primary:hover, .readlogjson-btn-primary:active:focus, .readlogjson-btn-primary.active:focus, .open > .dropdown-toggle.readlogjson-btn-primary:focus, .readlogjson-btn-primary:active.focus, .readlogjson-btn-primary.active.focus, .open > .dropdown-toggle.readlogjson-btn-primary.focus {
+    color: #fff;
+    background-color: #204d74;
+    border-color: #122b40
+}
+
+.readlogjson-btn-primary:active, .readlogjson-btn-primary.active, .open > .dropdown-toggle.readlogjson-btn-primary {
+    background-image: none
+}
+
+.readlogjson-btn-primary.disabled:hover, .readlogjson-btn-primary[disabled]:hover, fieldset[disabled] .readlogjson-btn-primary:hover, .readlogjson-btn-primary.disabled:focus, .readlogjson-btn-primary[disabled]:focus, fieldset[disabled] .readlogjson-btn-primary:focus, .readlogjson-btn-primary.disabled.focus, .readlogjson-btn-primary[disabled].focus, fieldset[disabled] .readlogjson-btn-primary.focus {
+    background-color: #337ab7;
+    border-color: #2e6da4
+}
+
+.readlogjson-btn-primary .badge {
+    color: #337ab7;
+    background-color: #fff
+}
+
+.readlogjson-btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c
+}
+
+.readlogjson-btn-success:focus, .readlogjson-btn-success.focus {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #255625
+}
+
+.readlogjson-btn-success:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439
+}
+
+.readlogjson-btn-success:active, .readlogjson-btn-success.active, .open > .dropdown-toggle.readlogjson-btn-success {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439
+}
+
+.readlogjson-btn-success:active:hover, .readlogjson-btn-success.active:hover, .open > .dropdown-toggle.readlogjson-btn-success:hover, .readlogjson-btn-success:active:focus, .readlogjson-btn-success.active:focus, .open > .dropdown-toggle.readlogjson-btn-success:focus, .readlogjson-btn-success:active.focus, .readlogjson-btn-success.active.focus, .open > .dropdown-toggle.readlogjson-btn-success.focus {
+    color: #fff;
+    background-color: #398439;
+    border-color: #255625
+}
+
+.readlogjson-btn-success:active, .readlogjson-btn-success.active, .open > .dropdown-toggle.readlogjson-btn-success {
+    background-image: none
+}
+
+.readlogjson-btn-success.disabled:hover, .readlogjson-btn-success[disabled]:hover, fieldset[disabled] .readlogjson-btn-success:hover, .readlogjson-btn-success.disabled:focus, .readlogjson-btn-success[disabled]:focus, fieldset[disabled] .readlogjson-btn-success:focus, .readlogjson-btn-success.disabled.focus, .readlogjson-btn-success[disabled].focus, fieldset[disabled] .readlogjson-btn-success.focus {
+    background-color: #5cb85c;
+    border-color: #4cae4c
+}
+
+.readlogjson-btn-success .badge {
+    color: #5cb85c;
+    background-color: #fff
+}
+
+.readlogjson-btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da
+}
+
+.readlogjson-btn-info:focus, .readlogjson-btn-info.focus {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #1b6d85
+}
+
+.readlogjson-btn-info:hover {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc
+}
+
+.readlogjson-btn-info:active, .readlogjson-btn-info.active, .open > .dropdown-toggle.readlogjson-btn-info {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc
+}
+
+.readlogjson-btn-info:active:hover, .readlogjson-btn-info.active:hover, .open > .dropdown-toggle.readlogjson-btn-info:hover, .readlogjson-btn-info:active:focus, .readlogjson-btn-info.active:focus, .open > .dropdown-toggle.readlogjson-btn-info:focus, .readlogjson-btn-info:active.focus, .readlogjson-btn-info.active.focus, .open > .dropdown-toggle.readlogjson-btn-info.focus {
+    color: #fff;
+    background-color: #269abc;
+    border-color: #1b6d85
+}
+
+.readlogjson-btn-info:active, .readlogjson-btn-info.active, .open > .dropdown-toggle.readlogjson-btn-info {
+    background-image: none
+}
+
+.readlogjson-btn-info.disabled:hover, .readlogjson-btn-info[disabled]:hover, fieldset[disabled] .readlogjson-btn-info:hover, .readlogjson-btn-info.disabled:focus, .readlogjson-btn-info[disabled]:focus, fieldset[disabled] .readlogjson-btn-info:focus, .readlogjson-btn-info.disabled.focus, .readlogjson-btn-info[disabled].focus, fieldset[disabled] .readlogjson-btn-info.focus {
+    background-color: #5bc0de;
+    border-color: #46b8da
+}
+
+.readlogjson-btn-info .badge {
+    color: #5bc0de;
+    background-color: #fff
+}
+
+.readlogjson-btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236
+}
+
+.readlogjson-btn-warning:focus, .readlogjson-btn-warning.focus {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #985f0d
+}
+
+.readlogjson-btn-warning:hover {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512
+}
+
+.readlogjson-btn-warning:active, .readlogjson-btn-warning.active, .open > .dropdown-toggle.readlogjson-btn-warning {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512
+}
+
+.readlogjson-btn-warning:active:hover, .readlogjson-btn-warning.active:hover, .open > .dropdown-toggle.readlogjson-btn-warning:hover, .readlogjson-btn-warning:active:focus, .readlogjson-btn-warning.active:focus, .open > .dropdown-toggle.readlogjson-btn-warning:focus, .readlogjson-btn-warning:active.focus, .readlogjson-btn-warning.active.focus, .open > .dropdown-toggle.readlogjson-btn-warning.focus {
+    color: #fff;
+    background-color: #d58512;
+    border-color: #985f0d
+}
+
+.readlogjson-btn-warning:active, .readlogjson-btn-warning.active, .open > .dropdown-toggle.readlogjson-btn-warning {
+    background-image: none
+}
+
+.readlogjson-btn-warning.disabled:hover, .readlogjson-btn-warning[disabled]:hover, fieldset[disabled] .readlogjson-btn-warning:hover, .readlogjson-btn-warning.disabled:focus, .readlogjson-btn-warning[disabled]:focus, fieldset[disabled] .readlogjson-btn-warning:focus, .readlogjson-btn-warning.disabled.focus, .readlogjson-btn-warning[disabled].focus, fieldset[disabled] .readlogjson-btn-warning.focus {
+    background-color: #f0ad4e;
+    border-color: #eea236
+}
+
+.readlogjson-btn-warning .badge {
+    color: #f0ad4e;
+    background-color: #fff
+}
+
+.readlogjson-btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a
+}
+
+.readlogjson-btn-danger:focus, .readlogjson-btn-danger.focus {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #761c19
+}
+
+.readlogjson-btn-danger:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925
+}
+
+.readlogjson-btn-danger:active, .readlogjson-btn-danger.active, .open > .dropdown-toggle.readlogjson-btn-danger {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925
+}
+
+.readlogjson-btn-danger:active:hover, .readlogjson-btn-danger.active:hover, .open > .dropdown-toggle.readlogjson-btn-danger:hover, .readlogjson-btn-danger:active:focus, .readlogjson-btn-danger.active:focus, .open > .dropdown-toggle.readlogjson-btn-danger:focus, .readlogjson-btn-danger:active.focus, .readlogjson-btn-danger.active.focus, .open > .dropdown-toggle.readlogjson-btn-danger.focus {
+    color: #fff;
+    background-color: #ac2925;
+    border-color: #761c19
+}
+
+.readlogjson-btn-danger:active, .readlogjson-btn-danger.active, .open > .dropdown-toggle.readlogjson-btn-danger {
+    background-image: none
+}
+
+.readlogjson-btn-danger.disabled:hover, .readlogjson-btn-danger[disabled]:hover, fieldset[disabled] .readlogjson-btn-danger:hover, .readlogjson-btn-danger.disabled:focus, .readlogjson-btn-danger[disabled]:focus, fieldset[disabled] .readlogjson-btn-danger:focus, .readlogjson-btn-danger.disabled.focus, .readlogjson-btn-danger[disabled].focus, fieldset[disabled] .readlogjson-btn-danger.focus {
+    background-color: #d9534f;
+    border-color: #d43f3a
+}
+
+.readlogjson-btn-danger .badge {
+    color: #d9534f;
+    background-color: #fff
+}
+
+.readlogjson-btn-link {
+    color: #337ab7;
+    font-weight: normal;
+    border-radius: 0
+}
+
+.readlogjson-btn-link, .readlogjson-btn-link:active, .readlogjson-btn-link.active, .readlogjson-btn-link[disabled], fieldset[disabled] .readlogjson-btn-link {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.readlogjson-btn-link, .readlogjson-btn-link:hover, .readlogjson-btn-link:focus, .readlogjson-btn-link:active {
+    border-color: transparent
+}
+
+.readlogjson-btn-link:hover, .readlogjson-btn-link:focus {
+    color: #23527c;
+    text-decoration: underline;
+    background-color: transparent
+}
+
+.readlogjson-btn-link[disabled]:hover, fieldset[disabled] .readlogjson-btn-link:hover, .readlogjson-btn-link[disabled]:focus, fieldset[disabled] .readlogjson-btn-link:focus {
+    color: #777;
+    text-decoration: none
+}
+
+.readlogjson-btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px
+}
+
+.readlogjson-btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px
+}
+
+.readlogjson-btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px
+}
+
+.readlogjson-btn-block {
+    display: block;
+    width: 100%
+}
+
+.readlogjson-btn-block + .readlogjson-btn-block {
+    margin-top: 5px
+}
+
+/* resourcer field */
+.x-field-readlogjson-resource-clear,
+.x-field-readlogjson-resource-go {
+    border-left: 1px solid #e4e4e4 !important;
+}
+
+.x-field-readlogjson-resource-clear:hover,
+.x-field-readlogjson-resource-go:hover {
+    border-left-color: transparent !important;
+}
+
+.x-field-readlogjson-resource-clear:before {
+    content: '\f00d' !important;
+}
+
+.x-field-readlogjson-resource-go {
+    right: 31px !important;
+    border-radius: 0 !important;
+}
+
+.x-field-readlogjson-resource-go:before {
+    content: '\f15b' !important;
+}
+
+
+/* readlogjson-active field */
+.x-field-readlogjson-active-clear,
+.x-field-readlogjson-active-go {
+    border-left: 1px solid #e4e4e4 !important;
+}
+
+.x-field-readlogjson-active-clear:hover,
+.x-field-readlogjson-active-go:hover {
+    border-left-color: transparent !important;
+}
+
+.x-field-readlogjson-active-clear:before {
+    content: '\f00d' !important;
+}
+
+.x-field-readlogjson-active-go {
+    right: 31px !important;
+    border-radius: 0 !important;
+}
+
+.x-field-readlogjson-active-go:before {
+    content: '\f204' !important;
+}
+
+
+.readlogjson-btn-request {
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    padding: 5px 8px 5px 8px;
+    top: 4px;
+}

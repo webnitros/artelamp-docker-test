@@ -1,0 +1,1 @@
+{include 'file:chunks/catalog/filters/slider/row.tpl'}

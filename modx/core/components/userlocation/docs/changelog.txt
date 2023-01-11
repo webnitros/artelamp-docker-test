@@ -1,0 +1,22 @@
+Changelog for UserLocation.
+
+1.0.4-beta (04.11.2019)
+==============
+- Change "ulWidget"
+
+1.0.3-beta (20.10.2019)
+==============
+- Change "UserLocation.locations" chunk
+
+1.0.2-beta (18.10.2019)
+==============
+- Change "ulMethodDetectLocation"
+- Add "ulDetectLocationByIpGeoBase", "ulDetectLocationByDaData"
+
+1.0.1-beta (18.10.2019)
+==============
+- Add "locations" resolver
+
+1.0.0-beta (10.10.2019)
+==============
+- Initial

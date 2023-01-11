@@ -1,0 +1,38 @@
+{
+  "name": "fandeco/artelamp",
+  "authors": [
+    {
+      "name": "webnitros",
+      "email": "info@bustep.ru"
+    }
+  ],
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "cy:dev:open": "cypress open --config baseUrl=https://dev1.artelamp.massive.ru/"
+  },
+  "require": {
+    "guzzlehttp/guzzle": "~6.0",
+    "bukashk0zzz/yml-generator": "^1.11",
+    "traineratwot/yandex-disk-flysystem": "^1.0.5",
+    "traineratwot/cache": "^2.2",
+    "symfony/dotenv": "^5.2"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "robmorgan/phinx": "^0.12.1"
+  },
+  "autoload": {
+    "files": [
+      "core/model/mody.php"
+    ],
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.4.4"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+key: msppayanyway_payment_url
+value: 'https://www.payanyway.ru/assistant.htm'
+namespace: msppayanyway
+area: msppayanyway_main

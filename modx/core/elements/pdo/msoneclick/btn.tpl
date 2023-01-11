@@ -1,0 +1,1 @@
+<button class="btn btn_white {$selector} btn_one_click" data-hash="{$hash}" data-product="{$id}">купить в 1 клик</button>

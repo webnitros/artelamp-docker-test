@@ -1,0 +1,4 @@
+key: userlocation_front_css
+value: '[[+assetsUrl]]css/web/default.min.css'
+namespace: userlocation
+area: userlocation_main

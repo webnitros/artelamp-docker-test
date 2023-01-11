@@ -1,0 +1,5 @@
+key: admintools_template_resource_relationship
+value: '1'
+xtype: combo-boolean
+namespace: admintools
+area: admintools_main

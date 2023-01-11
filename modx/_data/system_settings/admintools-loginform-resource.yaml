@@ -1,0 +1,4 @@
+key: admintools_loginform_resource
+xtype: numberfield
+namespace: admintools
+area: admintools_authorization

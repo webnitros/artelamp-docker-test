@@ -1,0 +1,4 @@
+key: userlocation_grid_location_fields
+value: 'id,type,name,active'
+namespace: userlocation
+area: userlocation_main

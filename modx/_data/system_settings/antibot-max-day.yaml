@@ -1,0 +1,5 @@
+key: antibot_max_day
+value: '3'
+xtype: numberfield
+namespace: antibot
+area: antibot_main

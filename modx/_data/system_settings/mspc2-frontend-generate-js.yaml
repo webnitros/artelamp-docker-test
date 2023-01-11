@@ -1,0 +1,4 @@
+key: mspc2_frontend_generate_js
+value: '[[+jsUrl]]web/generate.js'
+namespace: mspromocode2
+area: mspc2_frontend

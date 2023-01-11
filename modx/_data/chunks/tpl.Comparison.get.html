@@ -1,0 +1,18 @@
+id: 34
+source: 1
+name: tpl.Comparison.get
+description: ''
+category: Comparison
+properties: 'a:0:{}'
+static_file: core/components/comparison/elements/chunks/chunk.get.tpl
+
+-----
+
+<span class="comparison comparison-[[+list]][[+added]][[+can_compare]]">
+	<a href="[[+link]]" class="comparison-go">
+		[[%comparison_go_to_list]] (<span class="comparison-total">[[+count]]</span>)
+	</a>
+</span>
+
+<!--comparison_can_compare  can_compare-->
+<!--comparison_added  added-->

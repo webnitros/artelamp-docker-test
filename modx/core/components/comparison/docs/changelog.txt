@@ -1,0 +1,81 @@
+Changelog for Comparison.
+
+1.2.14 pl
+==============
+- Change total count in list page
+
+1.2.13 pl
+==============
+- Fixed added class in getComparison for new users
+
+1.2.12 pl
+==============
+- Fix JS error while register addComparison
+
+1.2.11 pl
+==============
+- Added msDiscount compatibility
+
+1.2.10 pl
+==============
+- Fixed loading of js and css when only GetComparison is called.
+
+1.2.9 pl
+==============
+- Fixed possible bug with "Cannot find the specified list of comparisons".
+- Improved reload of the page when comparison list is empty.
+
+1.2.8 pl
+==============
+- Fixed passing the parameter &minItems into javascript.
+
+1.2.7 pl
+==============
+- Improved compatibility with miniShop2.4
+
+1.2.6 pl
+==============
+- Improved load of pdoTools.
+
+1.2.5 pl
+==============
+- [CompareList] Fixed cache problems.
+
+1.2.4 pl
+==============
+- Ability to remove last item from compare page.
+- Fixed bug with multiple MS2 products on page because of lack of grouping.
+
+1.2.3 pl
+==============
+- Improved default javascript. Now you can use html tags in add\remove links.
+
+1.2.2 pl
+==============
+- Improved installation script for MODX 2.4.
+
+1.2.1 pl1
+==============
+- Updated version of pdoTools in the installer.
+
+1.2.0 pl1
+==============
+- Added support of product options in miniShop2.2.
+
+1.1.0 pl
+==============
+- Added contexts support.
+
+1.0.0 pl1
+==============
+- Added snippet GetComparison.
+
+1.0.0 rc
+==============
+- Improved generation of direct links to compare list.
+- Fixed using TVs in CompareList.
+- Fixed javascript events for elements, that were loaded through ajax.
+
+1.0.0 beta1
+==============
+- Initial release.

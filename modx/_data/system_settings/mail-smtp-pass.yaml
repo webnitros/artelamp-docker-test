@@ -1,0 +1,4 @@
+key: mail_smtp_pass
+value: 'v6?K?B$ZRNR2'
+xtype: text-password
+area: mail

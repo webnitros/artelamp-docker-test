@@ -1,0 +1,5 @@
+key: bxsender_mailsender_mailing_log
+value: '{"sent":3033,"started":1662552162,"status":null,"retry_attempt":null,"retry_at":null,"error":null}'
+xtype: textarea
+namespace: bxsender
+area: bxsender_mailsender

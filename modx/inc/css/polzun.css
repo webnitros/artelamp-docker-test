@@ -1,0 +1,18 @@
+.ui-widget-content {
+    border-color: #0578b7;
+    background: #0578b7;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border-color: #ffcc00;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    background: #ffcc00;
+    top: -4px;
+    outline: 0px;
+}
+
+#slider-range2 {
+    height: 10px;
+}

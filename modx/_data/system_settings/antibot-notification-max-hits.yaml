@@ -1,0 +1,5 @@
+key: antibot_notification_max_hits
+value: '5000'
+xtype: numberfield
+namespace: antibot
+area: antibot_notification

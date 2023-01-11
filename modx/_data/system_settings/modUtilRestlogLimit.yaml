@@ -1,0 +1,4 @@
+key: modUtilRestlogLimit
+value: '1000'
+namespace: modutilities
+area: modUtilities

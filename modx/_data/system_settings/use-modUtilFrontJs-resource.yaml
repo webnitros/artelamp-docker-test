@@ -1,0 +1,5 @@
+key: use_modUtilFrontJs_resource
+value: '1'
+xtype: combo-boolean
+namespace: modutilities
+area: 'modUtilities Фронт'

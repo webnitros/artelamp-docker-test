@@ -9,6 +9,7 @@ help:
 	@echo "Commands:"
 	@echo "  docker-start        Create and start containers"
 	@echo "  docker-stop         Stop and clear all services"
+	@echo "  modx-extract        Export elements modx"
 
 composer-up:
 	@docker run --rm -v $(shell pwd)/web/app:/app composer update
@@ -29,10 +30,10 @@ docker-restart:
 	@make docker-start
 
 modx-extract:
-	sh comands/modx-extract.sh
+	@docker exec -i $(shell docker-compose ps -q php-fpm) bash -c "gitify extract"
 
 modx-backup:
-	sh comands/modx-backup.sh
+	@docker exec -i $(shell docker-compose ps -q php-fpm) bash -c "rm -rf ./_backup/db.sql && rm -rf ./_backup/db.tar.gz && gitify backup db.sql && cd ./_backup && tar -czvf db.tar.gz db.sql && rm -rf db.sql && cd ../ && gitify extract"
 
 logs:
 	@docker-compose logs -f

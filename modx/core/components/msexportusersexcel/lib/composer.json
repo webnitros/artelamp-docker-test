@@ -1,0 +1,21 @@
+{
+    "name": "webnitros/exportUser",
+    "description": "Extra export data for MODX",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrey Stepanenko",
+            "email": "info@bustep.ru",
+            "homepage": "https://bustep.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "symfony/http-foundation": "~3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "msExportUsersExcel\\": "classes/"
+        }
+    }
+}

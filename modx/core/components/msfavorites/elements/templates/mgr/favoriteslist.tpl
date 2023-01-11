@@ -1,0 +1,1 @@
+<div id="msfavorites-panel-favoriteslist-div"></div>

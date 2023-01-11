@@ -1,0 +1,4 @@
+key: comparison_frontend_css
+value: '[[+assetsUrl]]css/default.css'
+namespace: comparison
+area: comparison_main
