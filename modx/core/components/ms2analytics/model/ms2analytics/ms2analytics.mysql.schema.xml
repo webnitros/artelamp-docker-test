@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model package="ms2analytics" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
-	<object class="Ms2aConfigData" table="ms2a_configData" extends="xPDOSimpleObject">
-		<field key="key" dbtype="varchar" precision="50" phptype="string" null="false" index="index" />
-		<field key="value" dbtype="text" phptype="string" null="true" />
-		<field key="default" dbtype="text" phptype="string" null="true" />
-		<field key="category" dbtype="enum" precision="'basic','product','order','yandex','google'" phptype="string" null="true" />
+    <object class="Ms2aConfigData" table="ms2a_config_data" extends="xPDOSimpleObject">
+        <field key="key" dbtype="varchar" precision="50" phptype="string" null="false" index="index"/>
+        <field key="value" dbtype="text" phptype="string" null="true"/>
+        <field key="default" dbtype="text" phptype="string" null="true"/>
+        <field key="category" dbtype="varchar" precision="50" phptype="string" null="true"/>
 
-		<index alias="key" name="key" primary="false" unique="true" type="BTREE" >
-			<column key="key" length="" collation="A" null="false" />
-			<column key="category" length="" collation="A" null="true" />
-		</index>
-	</object>
+        <index alias="key" name="key" primary="false" unique="true" type="BTREE">
+            <column key="key" length="" collation="A" null="false"/>
+            <column key="category" length="" collation="A" null="true"/>
+        </index>
+    </object>
 </model>

@@ -58,29 +58,24 @@
 							$data = [
 								'product_id' => $object->get('id'),
 							];
-							try {
-								/* @var modProcessorResponse $response */
-								$response = $this->modx->runProcessor('resource/product/gallery/upload', $data, [
-									'processors_path' => MODX_CORE_PATH . 'components/fandeco1c/processors/mgr/',
-								]);
-							} catch (Exception $e) {
-								$this->failure($e->getMessage(), [], 500);
-							}
-
-							if ($response->response['success']) {
-								$this->success('', [
-									'article'    => $article,
-									'product_id' => $object->get('id'),
-									'generate'   => 'completed',
-								]);
-							} else {
-								$this->success('', [
-									'article'    => $article,
-									'product_id' => $object->get('id'),
-									'generate'   => 'completed',
-								]);
-//								$this->failure($response->response['message'], $data, 500);
-							}
+                            $status_code = 1000;
+                            try {
+                                include_once MODX_CORE_PATH . 'classes/fdkNewDownloadImages.php';
+                                $this->fdkNewDownloadImages = new fdkNewDownloadImages($this->modx);
+                                $status_code = $this->fdkNewDownloadImages->getImages($object, $article);
+                                $message = $this->fdkNewDownloadImages->errorMsg;
+                            } catch (Exception $e) {
+                                $this->failure($e->getMessage(), [], 500);
+                            }
+                            if ($status_code === 200) {
+                                $this->success('', [
+                                    'article' => $article,
+                                    'product_id' => $object->get('id'),
+                                    'generate' => 'completed'
+                                ]);
+                            } else {
+                                $this->failure($message, $data, $status_code);
+                            }
 						}
 					} else {
 						$this->failure('Товар не найден', [
