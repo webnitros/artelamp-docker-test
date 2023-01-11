@@ -1,5 +1,5 @@
 FROM jwilder/nginx-proxy
 
-RUN echo "upstream php-upstream { server php:9000; }" > /etc/nginx/conf.d/upstream.conf
+COPY default.conf.template /etc/nginx/templates/
 
 CMD ["nginx", "-g", "daemon off;"]
