@@ -19,6 +19,7 @@ yarn-up:
 	@docker exec -it $(shell docker-compose ps -q node) yarn -c install
 
 docker-start: init
+	@rm -Rf ../modx/core/cache/
 	docker-compose up --build --detach
 
 docker-stop:
