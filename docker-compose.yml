@@ -1,0 +1,65 @@
+version: '3.9'
+services:
+
+  mariadb:
+    image: mariadb:${MARIADB_VERSION}
+    environment:
+      - MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=yes
+      - MARIADB_DATABASE=${MARIADB_DATABASE}
+      - MARIADB_USER=${MARIADB_USERNAME}
+      - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+    volumes:
+      - ./docker/mariadb/data:/var/lib/mysql
+    ports:
+      - ${MARIADB_PORT}:3306
+    working_dir: /modx
+
+  nginx:
+    image: nginx:${NGINX_VERSION}
+    environment:
+      - NGINX_PORT=${NGINX_PORT}
+    volumes:
+      - ./docker/nginx:/etc/nginx/templates
+      - ./docker/log/nginx:/var/log/nginx
+      - ./modx:/modx
+      - ./data/images:/modx/assets/images
+      - ./data/manager:/modx/assets/manager
+      - ./data/media:/modx/assets/media
+      - ./data/YandexDisk:/modx/assets/YandexDisk
+    ports:
+      - ${NGINX_PORT}:80
+    depends_on:
+      - php-fpm
+      - mariadb
+    working_dir: /modx
+
+  php-fpm:
+    build:
+      context: ./docker/php-fpm
+      args:
+        - PHP_VERSION
+    volumes:
+      - ./docker/php-fpm/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - ./docker/log/php-fpm:/var/log/php
+      - ./.env:/modx/.env
+      - ./modx:/modx
+      - ./data/images:/modx/assets/images
+      - ./data/manager:/modx/assets/manager
+      - ./data/media:/modx/assets/media
+      - ./data/YandexDisk:/modx/assets/YandexDisk
+      - ./data/cache:/modx/core/cache
+    cap_add:
+      - SYS_PTRACE
+    depends_on:
+      - mariadb
+    environment:
+      PHP_IDE_CONFIG: "serverName=ModxDocker"
+    working_dir: /modx
+  composer:
+    image: "composer"
+    volumes:
+        - ./modx:/modx
+    depends_on:
+      - php-fpm
+    command: install
+    working_dir: /modx
