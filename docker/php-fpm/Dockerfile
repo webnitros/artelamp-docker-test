@@ -11,6 +11,7 @@ RUN docker-php-ext-configure gd --with-jpeg --with-webp && docker-php-ext-instal
 RUN docker-php-ext-install exif
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install mc
+RUN docker-php-ext-install nano
 RUN docker-php-ext-install pdo_mysql
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
