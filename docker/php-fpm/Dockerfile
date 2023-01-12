@@ -10,6 +10,7 @@ RUN pecl install xdebug-3.1.0
 RUN docker-php-ext-configure gd --with-jpeg --with-webp && docker-php-ext-install gd
 RUN docker-php-ext-install exif
 RUN docker-php-ext-install zip
+RUN docker-php-ext-install mc
 RUN docker-php-ext-install pdo_mysql
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
