@@ -24,12 +24,6 @@ docker-restart:
 	@make clean
 	@make docker-start
 
-modx-extract:
-	@docker exec -i $(shell docker-compose ps -q php-fpm) bash -c "gitify extract"
-
-modx-gitify-build:
-	@docker exec -i $(shell docker-compose ps -q php-fpm) bash -c "gitify build"
-
 modx-restore:
 	@echo "Import db.sql mysql..."
 	@docker exec -i $(shell docker-compose ps -q mariadb) mysql -u"$(MARIADB_USERNAME)" -p"$(MARIADB_PASSWORD)" "$(MARIADB_DATABASE)" < $(MYSQL_DUMPS_DIR)/db.sql
