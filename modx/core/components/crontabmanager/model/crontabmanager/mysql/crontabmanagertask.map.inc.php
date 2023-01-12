@@ -283,6 +283,14 @@ $xpdo_meta_map['CronTabManagerTask']= array (
       'cardinality' => 'many',
       'owner' => 'local',
     ),
+    'AutoPause' => 
+    array (
+      'class' => 'CronTabManagerAutoPause',
+      'local' => 'id',
+      'foreign' => 'task_id',
+      'cardinality' => 'many',
+      'owner' => 'local',
+    ),
   ),
   'aggregates' => 
   array (

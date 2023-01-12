@@ -8,5 +8,6 @@ $xpdo_meta_map = array (
     2 => 'CronTabManagerTaskLog',
     3 => 'CronTabManagerToken',
     4 => 'CronTabManagerNotification',
+    5 => 'CronTabManagerAutoPause',
   ),
 );

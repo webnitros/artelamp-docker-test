@@ -4,12 +4,21 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitaa20a2769a402f135ce0bf774e9f1cf9
+class ComposerStaticInitd011458465863fd44641be1553b8b52a
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'W' => 
         array (
             'Webnitros\\CronTabManager\\' => 25,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\Translation\\' => 30,
         ),
     );
 
@@ -18,13 +27,44 @@ class ComposerStaticInitaa20a2769a402f135ce0bf774e9f1cf9
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
+    );
+
+    public static $prefixesPsr0 = array (
+        'U' => 
+        array (
+            'UpdateHelper\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/kylekatarnls/update-helper/src',
+            ),
+        ),
+        'C' => 
+        array (
+            'CliArgs\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/cheprasov/php-cli-args/src',
+            ),
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitaa20a2769a402f135ce0bf774e9f1cf9::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitaa20a2769a402f135ce0bf774e9f1cf9::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd011458465863fd44641be1553b8b52a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd011458465863fd44641be1553b8b52a::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitd011458465863fd44641be1553b8b52a::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd011458465863fd44641be1553b8b52a::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

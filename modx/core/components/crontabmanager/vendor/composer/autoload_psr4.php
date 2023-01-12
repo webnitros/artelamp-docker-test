@@ -7,4 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Webnitros\\CronTabManager\\' => array($baseDir . '/src'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
+    '' => array($vendorDir . '/nesbot/carbon/src'),
 );

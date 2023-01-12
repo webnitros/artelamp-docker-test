@@ -5,7 +5,7 @@
  */
 class CronTabManagerTaskLogGetListProcessor extends modObjectGetListProcessor
 {
-    /* @var CronTabManager $CronTabManager*/
+    /* @var CronTabManager $CronTabManager */
     public $CronTabManager = null;
     public $objectType = 'CronTabManagerTaskLog';
     public $classKey = 'CronTabManagerTaskLog';
@@ -15,7 +15,8 @@ class CronTabManagerTaskLogGetListProcessor extends modObjectGetListProcessor
     public $languageTopics = array('crontabmanager:manager');
 
     /** {@inheritDoc} */
-    public function initialize() {
+    public function initialize()
+    {
         if (!$this->modx->hasPermission($this->permission)) {
             return $this->modx->lexicon('access_denied');
         }
@@ -47,6 +48,9 @@ class CronTabManagerTaskLogGetListProcessor extends modObjectGetListProcessor
         $orderColumns = $this->modx->getSelectColumns('CronTabManagerTaskLog', 'CronTabManagerTaskLog', '', array(), false);
         $c->select($orderColumns);
 
+        $c->leftJoin('CronTabManagerAutoPause', 'AutoPause', 'AutoPause.id = CronTabManagerTaskLog.auto_pause_id');
+        $c->select('AutoPause.when as autopause_when,AutoPause.from as autopause_from,AutoPause.to as autopause_to');
+
         $completed = $this->setCheckbox('completed');
         if (!empty($completed)) {
             $c->where(array('completed' => 0));
@@ -63,19 +67,28 @@ class CronTabManagerTaskLogGetListProcessor extends modObjectGetListProcessor
         if (!empty($task_id)) {
             $c->where(array('task_id' => $task_id));
         }
+
+        #auto_pause_id
         return $c;
     }
 
 
     public function prepareRow(xPDOObject $object)
     {
-        /* @var CronTabManagerTaskLog $object*/
+        /* @var CronTabManagerTaskLog $object */
         $array = $object->toArray();
         $array['actions'] = array();
 
 
         $array['end_run'] = !empty($array['end_run']) ? date('Y-m-d H:i:s', $array['end_run']) : '';
         $array['last_run'] = !empty($array['last_run']) ? date('Y-m-d H:i:s', $array['last_run']) : '';
+
+        $pause = null;
+        if (!empty($array['auto_pause_id']) && !empty($array['autopause_when'])) {
+            $when = $this->modx->lexicon('crontabmanager_when_' . $array['autopause_when']);
+            $pause = $when . ', ' . $this->modx->lexicon('crontabmanager_auto_pause_from') . ' ' . $array['autopause_from'] . ' ' . $this->modx->lexicon('crontabmanager_auto_pause_to') . '' . $array['autopause_to'];
+        }
+        $array['pause'] = $pause;
 
 
         // Remove

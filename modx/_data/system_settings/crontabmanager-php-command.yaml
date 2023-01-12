@@ -1,4 +1,0 @@
-key: crontabmanager_php_command
-value: /opt/php74/bin/php
-namespace: crontabmanager
-area: crontabmanager_main

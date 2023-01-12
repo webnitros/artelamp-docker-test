@@ -17,6 +17,9 @@ $xpdo_meta_map['CronTabManagerTaskLog']= array (
     'updatedon' => 0,
     'completed' => 0,
     'notification' => 0,
+    'auto_pause' => 0,
+    'auto_pause_id' => 0,
+    'hash' => '',
   ),
   'fieldMeta' => 
   array (
@@ -76,6 +79,31 @@ $xpdo_meta_map['CronTabManagerTaskLog']= array (
       'null' => true,
       'default' => 0,
     ),
+    'auto_pause' => 
+    array (
+      'dbtype' => 'tinyint',
+      'precision' => '1',
+      'phptype' => 'boolean',
+      'null' => true,
+      'default' => 0,
+    ),
+    'auto_pause_id' => 
+    array (
+      'dbtype' => 'int',
+      'precision' => '10',
+      'phptype' => 'integer',
+      'null' => true,
+      'default' => 0,
+    ),
+    'hash' => 
+    array (
+      'dbtype' => 'char',
+      'precision' => '32',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => '',
+      'index' => 'index',
+    ),
   ),
   'indexes' => 
   array (
@@ -120,6 +148,38 @@ $xpdo_meta_map['CronTabManagerTaskLog']= array (
       'columns' => 
       array (
         'task_id' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+      ),
+    ),
+    'auto_pause' => 
+    array (
+      'alias' => 'auto_pause',
+      'primary' => false,
+      'unique' => false,
+      'type' => 'BTREE',
+      'columns' => 
+      array (
+        'auto_pause' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+      ),
+    ),
+    'auto_pause_id' => 
+    array (
+      'alias' => 'auto_pause_id',
+      'primary' => false,
+      'unique' => false,
+      'type' => 'BTREE',
+      'columns' => 
+      array (
+        'auto_pause_id' => 
         array (
           'length' => '',
           'collation' => 'A',
@@ -175,6 +235,22 @@ $xpdo_meta_map['CronTabManagerTaskLog']= array (
         ),
       ),
     ),
+    'hash' => 
+    array (
+      'alias' => 'hash',
+      'primary' => false,
+      'unique' => false,
+      'type' => 'BTREE',
+      'columns' => 
+      array (
+        'hash' => 
+        array (
+          'length' => '',
+          'collation' => 'A',
+          'null' => false,
+        ),
+      ),
+    ),
   ),
   'aggregates' => 
   array (
@@ -182,6 +258,14 @@ $xpdo_meta_map['CronTabManagerTaskLog']= array (
     array (
       'class' => 'CronTabManagerTask',
       'local' => 'task_id',
+      'foreign' => 'id',
+      'cardinality' => 'one',
+      'owner' => 'foreign',
+    ),
+    'AutoPause' => 
+    array (
+      'class' => 'CronTabManagerAutoPause',
+      'local' => 'auto_pause_id',
       'foreign' => 'id',
       'cardinality' => 'one',
       'owner' => 'foreign',

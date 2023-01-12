@@ -36,11 +36,18 @@ class SchedulerService
     /* @var CronTabManagerTask $CronTabManagerTask */
     public $CronTabManagerTask = null;
 
+    /* @var boolean $defaultModeDevelop - запись информациюю о включеном режиме разработке */
+    public $defaultModeDevelop = false;
+
     /** @var int|string $requestPrimaryKey The primary key requested on the object/id route */
     public $requestPrimaryKey;
 
     /* @var boolean|null $mode */
     public $mode = null;
+
+
+    /* @var CronTabManagerAutoPause|null $auto_pause paused automatically task */
+    public $auto_pause = false;
 
     /**
      * @param CronTabManager $CronTabManager
@@ -116,6 +123,12 @@ class SchedulerService
                                 }
                             }
 
+                            $this->defaultModeDevelop = $task->get('mode_develop');
+
+                            // Добавить указатель что запуск в режиме dev
+                            if ($this->getArg('develop')) {
+                                $task->set('mode_develop', true);
+                            }
 
                             $this->runProcess($task, $method, $unLock, $controller);
                         }
@@ -212,16 +225,26 @@ class SchedulerService
         }
 
 
+        // 2. Проверка автоматической паузы
+        $autoPause = new \Webnitros\CronTabManager\AutoPause\Builder($task);
+        if ($this->auto_pause = $autoPause->getAutoPause()) {
+            $task->set('auto_pause', true);
+            $task->set('auto_pause_id', $this->auto_pause->get('id'));
+        }
+
         if ($this->isSetCompletionTime) {
+            $task->set('mode_develop', $this->defaultModeDevelop);
             $task->start();
         }
 
-        // 2. Запуск контроллера
+
+        // 2.1 Запуск контроллера
         $response = $method->invoke($controller);
 
 
         // 3. Остановка задания
         if ($this->isSetCompletionTime) {
+            $task->set('mode_develop', $this->defaultModeDevelop);
             $task->end();
         }
 
@@ -350,7 +373,15 @@ class SchedulerService
             $out .= "queryTime: {$queryTime}" . $prefix;
             $out .= "phpTime: {$phpTime}" . $prefix;
         }
+
         $out .= "TotalTime: {$totalTime}" . $prefix;
+
+
+        if ($this->auto_pause) {
+
+            $str = $this->auto_pause->str();
+            $out .= "<b style='color: green'>Paused automatically: </b>" . $str . $prefix;
+        }
         return $out;
     }
 
@@ -525,11 +556,20 @@ class SchedulerService
     public function setArgs($args)
     {
         if (!empty($args)) {
+            $config = [
+                'develop' => 'd',
+            ];
+            $CLiArgs = new \CliArgs\CliArgs($config);
+            $tmp = $CLiArgs->getArgs();
             $args = array_slice($args, 1);
             $data = [];
             foreach ($args as $arg) {
                 list($key, $value) = explode('=', $arg);
                 $data[$key] = $value;
+            }
+
+            if (array_key_exists('d', $tmp)) {
+                $data['develop'] = true;
             }
             $this->_args = $data;
         }

@@ -70,13 +70,14 @@ $_lang['CronTabManagerTask_err_remove'] = 'Не удалось удалить з
 $_lang['crontabmanager_show_crontabs'] = 'Список заданий';
 
 
-
 // Task Log
 $_lang['crontabmanager_task_log_id'] = 'id';
 $_lang['crontabmanager_task_log_last_run'] = 'Запуск';
 $_lang['crontabmanager_task_log_end_run'] = 'Остановка';
 $_lang['crontabmanager_task_log_completed'] = 'Завершено';
 $_lang['crontabmanager_task_log_notification'] = 'Уведомление';
+$_lang['crontabmanager_task_log_auto_pause'] = 'Авто пауза';
+$_lang['crontabmanager_task_log_pause'] = 'График пауз';
 $_lang['crontabmanager_task_log_createdon'] = 'Создан';
 $_lang['crontabmanager_task_log_updatedon'] = 'Обновлен';
 $_lang['crontabmanager_task_un_look'] = 'Task unlook';
@@ -84,6 +85,8 @@ $_lang['crontabmanager_task_err_ae_controller'] = 'Не удалось найт�
 $_lang['crontabmanager_task_year_err_ae_controller'] = 'Не удалось найти файл контроллера по указанному пути: [[+controller]]. Вы используете собственный путь к контроллеру по этому нужно добавить абсолютный путь до файла';
 $_lang['crontabmanager_task_removeLog'] = 'Удалить лог файл crontab';
 $_lang['crontabmanager_task_removelog_confirm'] = 'Вы уверены что хотите удалить лог файл crontab?';
+$_lang['crontabmanager_task_copyTask'] = 'Скопировать путь CLI';
+$_lang['crontabmanager_task_copyTask_success'] = 'Путь успешно скопирован';
 $_lang['crontabmanager_time_server'] = 'Время на сервере';
 
 
@@ -115,7 +118,6 @@ $_lang['crontabmanager_task_err_save'] = 'Ошибка при сохранени
 $_lang['crontabmanager_task_err_ns_minutes'] = 'Укажите количество минут для блокировки задания';
 $_lang['crontabmanager_task_err_ns_max_minuts_blockup'] = 'Максимальное количество минут для блокировки задания, не должно превышать: [[+max_minuts_blockup]] мин.';
 $_lang['crontabmanager_task_err_ns_allow_blocking_tasks'] = 'Блокировка заданий отключена!';
-
 
 
 #  Category category
@@ -167,10 +169,6 @@ $_lang['crontabmanager_cron_connector_read_log_btn'] = 'Читать лог фа
 $_lang['crontabmanager_cron_connector_args'] = 'Аргументы в виде user=1 resource=2';
 
 
-
-
-
-
 #  Notification
 $_lang['crontabmanager_notifications'] = 'Центр уведомлений';
 $_lang['crontabmanager_notifications_intro_msg'] = 'Список уведомлений об ошибках завершения задач';
@@ -196,3 +194,50 @@ $_lang['crontabmanager_notification_remove'] = 'Удалить уведомле�
 $_lang['crontabmanager_notification_remove_confirm'] = 'Вы уверены, что хотите удалить эту Уведомление?';
 $_lang['crontabmanager_notifications_remove_confirm'] = 'Вы уверены, что хотите удалить эти Уведомления?';
 $_lang['crontabmanager_notification_filter_read'] = 'Не прочитанные';
+
+
+////////////////////////
+//// Install
+////////////////////////
+$_lang['crontabmanager_button_install'] = 'Установить компонент';
+$_lang['crontabmanager_button_download'] = 'Скачать компонент';
+$_lang['crontabmanager_button_download_encryption'] = 'Скачать компонент c шифрацией';
+
+
+$_lang['crontabmanager_when_every_day'] = 'Каждый день';
+$_lang['crontabmanager_when_weekdays'] = 'Будни';
+$_lang['crontabmanager_when_weekends'] = 'Выходной';
+$_lang['crontabmanager_when_monday'] = 'Понедельник';
+$_lang['crontabmanager_when_tuesday'] = 'Вторник';
+$_lang['crontabmanager_when_wednesday'] = 'Среда';
+$_lang['crontabmanager_when_thursday'] = 'Четверг';
+$_lang['crontabmanager_when_friday'] = 'Пятница';
+$_lang['crontabmanager_when_saturday'] = 'Суббота';
+$_lang['crontabmanager_when_sunday'] = 'Воскресенье';
+$_lang['crontabmanager_auto_pause_from'] = 'с';
+$_lang['crontabmanager_auto_pause_to'] = 'по';
+
+
+// Auto Pause
+$_lang['crontabmanager_task_autopause'] = 'Автоматическая пауза';
+$_lang['crontabmanager_task_autopause_id'] = 'id';
+$_lang['crontabmanager_task_autopause_task_id'] = 'ID task';
+$_lang['crontabmanager_task_autopause_createdon'] = 'Создан';
+$_lang['crontabmanager_task_autopause_updatedon'] = 'Обновлен';
+$_lang['crontabmanager_task_autopause_when'] = 'Когда';
+$_lang['crontabmanager_task_autopause_from'] = 'С';
+$_lang['crontabmanager_task_autopause_to'] = 'По';
+$_lang['crontabmanager_task_autopause_active'] = 'Включена';
+
+####
+$_lang['crontabmanager_task_autopause_create'] = 'Добавить';
+$_lang['crontabmanager_task_autopause_update'] = 'Обновить';
+$_lang['crontabmanager_task_autopause_remove'] = 'Удалить';
+$_lang['crontabmanager_task_autopause_remove_confirm'] = 'Вы уверены что хотите удалить эту автопаузу?';
+$_lang['crontabmanager_task_autopauses_remove_confirm'] = 'Вы уверены что хотите удалить эту автопаузу?';
+$_lang['crontabmanager_task_autopauses_remove'] = 'Удалить';
+
+
+$_lang['crontabmanager_task_autopause_err_when'] = 'Укажите когда запускать';
+$_lang['crontabmanager_task_autopause_err_from'] = 'Укажите часы и минуты';
+$_lang['crontabmanager_task_autopause_err_to'] = 'Укажите часы и минуты';

@@ -18,7 +18,10 @@ $config_options = array(
     'media_server_images_source' => 'artelamp.ru',
     'locale' => 'ru_RU.utf-8',
     'session_cookie_domain' => getenv('SESSION_COOKIE_DOMAIN'),
+    'crontabmanager_handler_class' => getenv('CRONTABMANAGE_HANDLER'),
+    'crontabmanager_php_command' => getenv('CRONTABMANAGE_PHP_COMMAND'),
 );
+
 $driver_options = array();
 
 $lastInstallTime = 1606464940;
