@@ -1,0 +1,1 @@
+30	*/2	*	*	*	/opt/php74/bin/php /modx/core/scheduler/ControllersLinks/sync/products.php > /modx/core/scheduler/logs/task_id_3_products.log 2>&1 # t5hmni
