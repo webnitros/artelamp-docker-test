@@ -18,7 +18,9 @@ services:
     build:
       context: ./docker/nginx
       args:
-        - NGINX_VERSION
+        - NGINX_VERSION=${NGINX_VERSION}
+    env_file:
+      - .env
     image: nginx:${NGINX_VERSION}
     environment:
       - NGINX_PORT=${NGINX_PORT}
@@ -41,7 +43,7 @@ services:
     build:
       context: ./docker/php-fpm
       args:
-        - PHP_VERSION
+        - PHP_VERSION=${PHP_VERSION}
     volumes:
       - ./docker/php-fpm/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
       - ./docker/log/php-fpm:/var/log/php
