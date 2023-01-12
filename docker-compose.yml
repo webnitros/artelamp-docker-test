@@ -61,6 +61,8 @@ services:
     environment:
       PHP_IDE_CONFIG: "serverName=ModxDocker"
     working_dir: /modx
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   composer:
     image: "composer"
     volumes:
