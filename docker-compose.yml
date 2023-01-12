@@ -15,14 +15,15 @@ services:
     working_dir: /modx
 
   nginx:
-    image: nginx:${NGINX_VERSION}
     build:
       context: ./docker/nginx
-      dockerfile: "./Dockerfile"
+      args:
+        - NGINX_VERSION
+    image: nginx:${NGINX_VERSION}
     environment:
       - NGINX_PORT=${NGINX_PORT}
     volumes:
-      - ./docker/nginx:/etc/nginx/templates
+      - ./docker/nginx/templates:/etc/nginx/templates
       - ./docker/log/nginx:/var/log/nginx
       - ./modx:/modx
       - ./data/images:/modx/assets/images
@@ -39,7 +40,6 @@ services:
   php-fpm:
     build:
       context: ./docker/php-fpm
-      dockerfile: "./Dockerfile"
       args:
         - PHP_VERSION
     volumes:

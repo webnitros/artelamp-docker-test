@@ -1,5 +1,7 @@
-FROM nginx:1.22
+ARG NGINX_VERSION=${NGINX_VERSION}
 
-COPY default.conf /etc/nginx/templates
+FROM nginx:${NGINX_VERSION}
+
+COPY templates /etc/nginx/templates
 
 CMD ["nginx", "-g", "daemon off;"]
