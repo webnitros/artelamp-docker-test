@@ -7,9 +7,11 @@ if (!defined('MODX_CRONTAB_MAX_TIME') OR !MODX_CRONTAB_MAX_TIME) {
 
 define('MODX_API_MODE', true);
 require_once dirname(dirname(dirname(__FILE__))) . '/config.core.php';
-require_once MODX_CORE_PATH . 'model/modx/modx.class.php';
+require_once MODX_CORE_PATH . 'model/mody.php';
 
-$modx = new modX();
+
+$appClass = $appClass ?? 'modX';
+$modx = modX::getInstance($appClass);
 $modx->initialize('mgr');
 $modx->getService('error', 'error.modError');
 $modx->setLogLevel(modX::LOG_LEVEL_ERROR);
