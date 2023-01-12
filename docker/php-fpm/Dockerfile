@@ -1,6 +1,6 @@
-ARG PHP_VERSION=${PHP_VERSION}
+ARG PHP_VERSION=7.4
 
-FROM php:${PHP_VERSION}-fpm-alpine
+FROM php:7.4-fpm-alpine
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN apk update && apk upgrade

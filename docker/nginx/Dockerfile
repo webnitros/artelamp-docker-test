@@ -1,6 +1,6 @@
-ARG NGINX_VERSION=${NGINX_VERSION}
+ARG NGINX_VERSION=1.22
 
-FROM nginx:${NGINX_VERSION}
+FROM nginx:1.22
 
 COPY templates /etc/nginx/templates
 
