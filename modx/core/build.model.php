@@ -1,24 +1,18 @@
 <?php
 /* include custom core config and define core path */
-@include(dirname(dirname(__FILE__)) . '/config.core.php');
-
-if (!defined('MODX_CORE_PATH')) define('MODX_CORE_PATH', dirname(__FILE__) . '/core/');
+@include(dirname(__FILE__, 2) . '/config.core.php');
+include_once dirname(MODX_CORE_PATH, 1).'/vendor/autoload.php';
 
 class buildMapXPDO
 {
-
-    /** @var modX $modx */
-    public $modx;
+    /* @var modY $modx*/
+    public modY $modx;
     /** @var array $config */
     public $config = [];
 
     public function __construct($core_path, array $config = [])
     {
-        /** @noinspection PhpIncludeInspection */
-        require($core_path . 'model/modx/modx.class.php');
-
-        /** @var modX $modx */
-        $this->modx = new modX();
+        $this->modx = modY::getInstance('modY');
         $this->modx->initialize('mgr');
         $this->modx->getService('error', 'error.modError');
 
