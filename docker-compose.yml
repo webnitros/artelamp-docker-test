@@ -38,8 +38,6 @@ services:
       - php-fpm
       - mariadb
     working_dir: /modx
-    env_file:
-      - .env.nginx.local
   php-fpm:
     build:
       context: ./docker/php-fpm
