@@ -4,7 +4,7 @@
 	use fandeco\category\CategoryExtension;
 	use fandeco\category\Description;
 
-	require_once dirname(MODX_BASE_PATH) . '/vendor/autoload.php';
+	require_once (MODX_BASE_PATH) . 'vendor/autoload.php';
 
 	include_once __DIR__ . '/_default.php';
 
@@ -16,22 +16,10 @@
 	 */
 	class CrontabControllerSyncProducts extends CrontabControllerSync
 	{
-		/**
-		 * @var bool
-		 */
-		private $isReport = FALSE;
-		/**
-		 * @var modutilitiesCsv
-		 */
-		private $report;
-		/**
-		 * @var array
-		 */
-		public $submits = [];
-		/**
-		 * @var array
-		 */
-		public $Categories = [];
+		private bool $isReport = FALSE;
+		private modutilitiesCsv $report;
+		public array $submits = [];
+		public array $Categories = [];
 
 		public function __construct(modX $modx, array $config = [])
 		{
@@ -87,12 +75,12 @@
 			foreach ($products as $k => $product) {
 				$category = trim($product['good_type_web']);
 				if (mb_strtolower($category) === 'на ручную проверку') {
-					$this->addError($artikul_1c, 'На ручную проверку');
+					$this->addError($k, 'На ручную проверку');
 					continue;
 				}
 				$sub_category = trim($product['sub_category']);
 				if (mb_strtolower($sub_category) === 'на ручную проверку') {
-					$this->addError($artikul_1c, 'На ручную проверку');
+					$this->addError($k, 'На ручную проверку');
 					continue;
 				}
 				if (mb_strtoupper(trim($category)) === mb_strtoupper(trim($sub_category))) {
@@ -412,9 +400,10 @@ where {$tableProduct2}.published = 1 and {$tableProduct}.article not in ($ARTS)
 							break;
 						default:
 							$oldValue = $Product->get($field);
+                            // в 1С также instalation с одной "л"
 							if ($field !== 'description' && $field !== 'title' && $field !== 'type of instalation') {
 								echo '<pre>';
-								$this->print_msg('Не удалось опредеить тип {' . $type . '} поля ' . $field . PHP_EOL);
+								$this->print_msg('Не удалось опредеить тип {' . ($type ?? 'NULL') . '} поля ' . $field . PHP_EOL);
 								continue 2;
 							}
 							break;
@@ -787,8 +776,6 @@ where {$tableProduct2}.published = 1 and {$tableProduct}.article not in ($ARTS)
 //					}
 				}
 			}
-
 		}
-
 	}
 

@@ -36,7 +36,7 @@ class Fandeco1cSync
                 'suppressSuffix' => true, // иначе при использовании format=json в конец url добавить http://fandeco.ru/method.json
                 'timeout' => 120,
                 'username' => $this->modx->getOption('Ic_username',null,'WebUserArtelamp'),
-                'password' => $this->modx->getOption('Ic_password',null,'VXDTB9lg4Uz4vkKsASAx'),
+                'password' => $this->modx->getOption('Ic_password',null,'VXDTB9lg4Uz4vkKsASAx2'),
                 /*'headers' => array(
                        'content-type' => 'application/json'
                 ),*/

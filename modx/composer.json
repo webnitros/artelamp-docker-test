@@ -16,12 +16,23 @@
     "bukashk0zzz/yml-generator": "^1.11",
     "traineratwot/yandex-disk-flysystem": "^1.0.5",
     "traineratwot/cache": "^2.2",
+    "fandeco/category": "dev-master",
     "symfony/dotenv": "^5.2"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
     "robmorgan/phinx": "^0.12.1"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/webnitros/readerxlsx"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/fandeco/Category"
+    }
+  ],
   "autoload": {
     "files": [
       "core/model/mody.php"
@@ -32,7 +43,7 @@
   },
   "config": {
     "platform": {
-      "php": "7.4.4"
+      "php": "7.4"
     }
   }
 }
