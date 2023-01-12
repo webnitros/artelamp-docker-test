@@ -1,4 +1,0 @@
-key: mail_smtp_keepalive
-value: '0'
-xtype: combo-boolean
-area: mail

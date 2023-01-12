@@ -1,5 +1,0 @@
-key: admintools_show_lockmenu
-value: '1'
-xtype: combo-boolean
-namespace: admintools
-area: admintools_security

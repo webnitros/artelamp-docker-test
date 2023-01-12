@@ -1,4 +1,0 @@
-key: crontabmanager_rest_controller
-value: assets/components/crontabmanager/rest.php
-namespace: crontabmanager
-area: crontabmanager_rest

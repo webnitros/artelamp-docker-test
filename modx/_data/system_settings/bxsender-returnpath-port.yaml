@@ -1,5 +1,0 @@
-key: bxsender_returnpath_port
-value: '995'
-xtype: numberfield
-namespace: bxsender
-area: bxsender_returnpath

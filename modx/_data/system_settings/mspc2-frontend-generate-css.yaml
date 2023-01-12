@@ -1,4 +1,0 @@
-key: mspc2_frontend_generate_css
-value: '[[+cssUrl]]web/generate.css'
-namespace: mspromocode2
-area: mspc2_frontend

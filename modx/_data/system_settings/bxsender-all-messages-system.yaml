@@ -1,5 +1,0 @@
-key: bxsender_all_messages_system
-value: '1'
-xtype: combo-boolean
-namespace: bxsender
-area: bxsender_main

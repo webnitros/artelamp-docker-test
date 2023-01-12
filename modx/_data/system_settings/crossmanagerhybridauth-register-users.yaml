@@ -1,5 +1,0 @@
-key: crossmanagerhybridauth_register_users
-value: '1'
-xtype: combo-boolean
-namespace: crossmanagerhybridauth
-area: crossmanagerhybridauth_main

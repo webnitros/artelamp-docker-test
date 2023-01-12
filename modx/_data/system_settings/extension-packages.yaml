@@ -1,3 +1,0 @@
-key: extension_packages
-value: '[{"minishop2":{"path":"[[++core_path]]components/minishop2/model/"}},{"app":{"path":"[[++core_path]]components/app/model/"}},{"msoneclick":{"path":"[[++core_path]]components/msoneclick/model/"}},{"modutilities":{"path":"[[++core_path]]components/modutilities/model/"}},{"extraext":{"path":"[[++core_path]]components/extraext/model/"}},{"ms2analytics":{"path":"[[++core_path]]components/ms2analytics/model/"}},{"bxsender":{"path":"[[++core_path]]components/bxsender/model/"}},{"collections":{"path":"[[++core_path]]components/collections/model/"}}]'
-area: system

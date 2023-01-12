@@ -1,5 +1,0 @@
-key: msppayanyway_payment_failure_id
-value: '39445'
-xtype: numberfield
-namespace: msppayanyway
-area: msppayanyway_main

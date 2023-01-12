@@ -1,5 +1,0 @@
-key: userlocation_detect_location
-value: '0'
-xtype: combo-boolean
-namespace: userlocation
-area: userlocation_main

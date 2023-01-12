@@ -1,4 +1,0 @@
-key: admintools_only_current_context_user
-xtype: combo-boolean
-namespace: admintools
-area: admintools_main

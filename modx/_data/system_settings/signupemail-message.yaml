@@ -1,4 +1,0 @@
-key: signupemail_message
-value: '<p>Здравствуйте [[+uid]],</p><p>Ваши данные для административного входа на [[+sname]]:</p>                <p><strong>Логин:</strong> [[+uid]]<br /><strong>Пароль:</strong> [[+pwd]]<br /></p>                <p>После того как вы войдете в административную часть MODX [[+surl]], вы можете изменить свой пароль.</p>                <p>С уважением, <br />Администрация сайта</p>'
-xtype: textarea
-area: authentication

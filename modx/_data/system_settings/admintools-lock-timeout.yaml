@@ -1,5 +1,0 @@
-key: admintools_lock_timeout
-value: '0'
-xtype: numberfield
-namespace: admintools
-area: admintools_security

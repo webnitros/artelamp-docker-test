@@ -1,5 +1,0 @@
-key: bxsender_undeliverable_error_count
-value: '2'
-xtype: numberfield
-namespace: bxsender
-area: bxsender_main

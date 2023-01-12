@@ -1,5 +1,0 @@
-key: bxsender_returnpath_ssl
-value: '1'
-xtype: combo-boolean
-namespace: bxsender
-area: bxsender_returnpath

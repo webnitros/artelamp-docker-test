@@ -1,4 +1,0 @@
-key: admintools_clear_only_resource_cache
-xtype: combo-boolean
-namespace: admintools
-area: admintools_main

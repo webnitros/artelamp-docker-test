@@ -1,5 +1,0 @@
-key: antibot_enable_statistics
-value: '1'
-xtype: combo-boolean
-namespace: antibot
-area: antibot_main

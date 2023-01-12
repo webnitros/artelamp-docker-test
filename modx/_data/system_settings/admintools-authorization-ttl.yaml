@@ -1,5 +1,0 @@
-key: admintools_authorization_ttl
-value: '600'
-xtype: numberfield
-namespace: admintools
-area: admintools_authorization

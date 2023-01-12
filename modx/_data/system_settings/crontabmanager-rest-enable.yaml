@@ -1,5 +1,0 @@
-key: crontabmanager_rest_enable
-value: '1'
-xtype: combo-boolean
-namespace: crontabmanager
-area: crontabmanager_rest

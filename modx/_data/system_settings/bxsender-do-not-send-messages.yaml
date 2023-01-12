@@ -1,4 +1,0 @@
-key: bxsender_do_not_send_messages
-xtype: combo-boolean
-namespace: bxsender
-area: bxsender_main

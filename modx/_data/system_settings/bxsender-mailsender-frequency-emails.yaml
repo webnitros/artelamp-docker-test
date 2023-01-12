@@ -1,5 +1,0 @@
-key: bxsender_mailsender_frequency_emails
-value: '10'
-xtype: numberfield
-namespace: bxsender
-area: bxsender_mailsender

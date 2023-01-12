@@ -1,5 +1,0 @@
-key: bxsender_minishop2_status_change
-value: '1'
-xtype: combo-boolean
-namespace: bxsender
-area: bxsender_minishop2

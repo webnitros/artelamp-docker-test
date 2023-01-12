@@ -1,4 +1,0 @@
-key: admintools_hide_component_description
-xtype: combo-boolean
-namespace: admintools
-area: admintools_main

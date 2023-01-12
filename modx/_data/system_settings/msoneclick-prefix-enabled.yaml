@@ -1,5 +1,0 @@
-key: msoneclick_prefix_enabled
-value: '0'
-xtype: combo-boolean
-namespace: msoneclick
-area: msoneclick_phone

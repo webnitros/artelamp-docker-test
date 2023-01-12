@@ -1,5 +1,0 @@
-key: crontabmanager_blocking_time_minutes
-value: '1'
-xtype: numberfield
-namespace: crontabmanager
-area: crontabmanager_blocking

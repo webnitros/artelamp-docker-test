@@ -1,5 +1,0 @@
-key: msoneclick_mask_phone
-value: '1'
-xtype: combo-boolean
-namespace: msoneclick
-area: msoneclick_phone

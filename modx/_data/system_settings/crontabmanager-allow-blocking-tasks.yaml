@@ -1,5 +1,0 @@
-key: crontabmanager_allow_blocking_tasks
-value: '1'
-xtype: combo-boolean
-namespace: crontabmanager
-area: crontabmanager_blocking

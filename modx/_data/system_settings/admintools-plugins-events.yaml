@@ -1,5 +1,0 @@
-key: admintools_plugins_events
-value: '1'
-xtype: combo-boolean
-namespace: admintools
-area: admintools_main

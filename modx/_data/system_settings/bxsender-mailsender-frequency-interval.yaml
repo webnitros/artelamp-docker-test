@@ -1,5 +1,0 @@
-key: bxsender_mailsender_frequency_interval
-value: '5'
-xtype: numberfield
-namespace: bxsender
-area: bxsender_mailsender

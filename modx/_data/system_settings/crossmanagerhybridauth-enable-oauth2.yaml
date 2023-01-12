@@ -1,5 +1,0 @@
-key: crossmanagerhybridauth_enable_oauth2
-value: '1'
-xtype: combo-boolean
-namespace: crossmanagerhybridauth
-area: crossmanagerhybridauth_main

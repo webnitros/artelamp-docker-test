@@ -1,4 +1,0 @@
-key: crontabmanager_handler_class
-value: CrontabManagerHandlerFile
-namespace: crontabmanager
-area: crontabmanager_main

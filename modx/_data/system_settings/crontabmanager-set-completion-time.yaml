@@ -1,5 +1,0 @@
-key: crontabmanager_set_completion_time
-value: '1'
-xtype: combo-boolean
-namespace: crontabmanager
-area: crontabmanager_main
