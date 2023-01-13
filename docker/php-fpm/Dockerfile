@@ -3,7 +3,6 @@ ARG PHP_VERSION=7.4
 FROM php:7.4-fpm-alpine
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-COPY docker/php-fpm/index.php index.php
 
 RUN apk update && apk upgrade
 RUN apk add build-base autoconf libzip-dev libpng-dev libjpeg-turbo-dev libwebp-dev bash mariadb-client mc nano
