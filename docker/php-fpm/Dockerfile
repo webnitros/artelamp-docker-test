@@ -18,6 +18,6 @@ RUN composer global config minimum-stability alpha
 RUN composer global require modmore/gitify:^2
 ENV PATH=/root/.composer/vendor/bin:$PATH
 
-WORKDIR /var/www/html
+COPY xdebug.ini /modx/
 
 CMD php-fpm -R
