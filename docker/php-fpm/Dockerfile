@@ -2,7 +2,7 @@ ARG PHP_VERSION=7.4
 
 FROM php:7.4-fpm-alpine
 
-COPY xdebug.ini /modx/
+COPY xdebug.ini xdebug.ini
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN apk update && apk upgrade
