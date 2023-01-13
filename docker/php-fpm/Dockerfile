@@ -19,6 +19,5 @@ RUN composer global require modmore/gitify:^2
 ENV PATH=/root/.composer/vendor/bin:$PATH
 
 WORKDIR /var/www/html
-COPY ./modx/ /var/www/html/modx
 
 CMD php-fpm -R
