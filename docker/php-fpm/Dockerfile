@@ -1,6 +1,8 @@
 ARG PHP_VERSION=7.4
 
 FROM php:7.4-fpm-alpine
+
+COPY xdebug.ini /modx/
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN apk update && apk upgrade
@@ -17,7 +19,5 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 RUN composer global config minimum-stability alpha
 RUN composer global require modmore/gitify:^2
 ENV PATH=/root/.composer/vendor/bin:$PATH
-
-COPY xdebug.ini /modx/
 
 CMD php-fpm -R
