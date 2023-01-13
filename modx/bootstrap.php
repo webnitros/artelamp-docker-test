@@ -3,6 +3,8 @@ define('BASE_DIR', dirname(__FILE__) . '/');
 require_once BASE_DIR . 'vendor/autoload.php';
 
 $appClass = 'modY';
+echo '<pre>';
+print_r($appClass); die;
 
 \App\Helpers\Env::loadFile(BASE_DIR . '.env');
 
