@@ -44,3 +44,4 @@ Extras/
 /modx/assets/cache/
 /data/
 /modx/core/scheduler/crontabs/*
+/modx/_backup/*
